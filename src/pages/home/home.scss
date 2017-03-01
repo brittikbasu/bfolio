@@ -1,78 +1,78 @@
 page-home {
   .header-container {
     height: 15.8vh;
-    width:100%;
+    width: 100%;
     /*width: 88.2%;*/
     background: white;
     z-index: 10;
   }
-  .me-container{
-    height:100%; /*original height 66%*/
-    width:282px; /*original width:88.3%;*/
-    width:88.3%;
+  .me-container {
+    height: 100%;
+    /*original height 66%*/
+    width: 282px;
+    /*original width:88.3%;*/
+    width: 88.3%;
     margin: 0 auto;
   }
- 
-
   .about-me-container {
     height: 39.5vh;
     /*width:84.3%;*/
     width: 100%;
     background: color($colors, primary);
     z-index: 0;
+    text-align: center;
+    padding-top: 5px;
+    color: color($colors, purpledark);
   }
   .my-work-container {
-    height: 200%;
+    height: 100%;
     /* width:84.3%;*/
     width: 100%;
     z-index: 100;
+    margin-top: -20px;
     background: color($colors, secondary);
+    padding-top: 5px;
+    text-align: center;
+    color: color($colors, purplelight);
   }
-
-
-  /******************* changed ionic defaults *********************/
-
-  .item ion-avatar img {
-   width: 78px;
-    height: 78px;
-     width: 19vw;
-    height: 19vw;
-    
+  h1 {
+    font-family: 'Jura', serif;
+    font-size: 1.68em;
+    letter-spacing: 2px;
+  }
   
+  /******************* changed ionic defaults *********************/
+  .item ion-avatar img {
+    width: 78px;
+    height: 78px;
+    width: 19vw;
+    height: 19vw;
     border-radius: 50%;
     overflow: hidden;
     border: solid 3px;
     border-color: color($colors, primary);
-}
-
-.item{
-  padding-left: 0;
-}
-
-.item.item-block .item-inner {
+  }
+  .item {
+    padding-left: 0;
+  }
+  .item.item-block .item-inner {
     border-bottom: none;
-}
-
-
-.item.item-block .item-inner {
+  }
+  .item.item-block .item-inner {
     padding-right: 0px;
-}
-
-.label {
+  }
+  .label {
     margin: 0 0 0 0;
-}
-
-.item h2 {
+  }
+  .item h2 {
     margin: 0 0 2px;
     font-size: 1.7em;
     font-weight: normal;
     font-family: 'Sarina', serif;
     letter-spacing: 0px;
     margin-left: 6%;
-
-
-}
-.item p {
+  }
+  .item p {
     overflow: inherit;
     margin: 0 0 2px;
     font-size: 1.02em;
@@ -82,44 +82,28 @@ page-home {
     text-align: left;
     letter-spacing: 3px;
     font-family: 'Jura', serif;
-    
-}
-
-@media (min-width:319px) and (max-width:374px){
-  /*iphone 5*/
-  .item h2{
-  font-size: 1.3em;
   }
-  .item p {
-        font-size: 0.67em;
-
+  @media (min-width:319px) and (max-width:374px) {
+    /*iphone 5*/
+    .item h2 {
+      font-size: 1.3em;
+    }
+    .item p {
+      font-size: 0.67em;
+    }
   }
-
-}
-
-@media (min-width:374px) and (max-width:410px){
-  /*iphone 6*/
-  .item h2{
-  font-size: 1.5em;
+  @media (min-width:374px) and (max-width:410px) {
+    /*iphone 6*/
+    .item h2 {
+      font-size: 1.5em;
+    }
+    .item p {
+      font-size: 0.85em;
+    }
   }
-  .item p {
-        font-size: 0.85em;
-
-  }
-
-}
-
-.item ion-avatar[item-left], .item ion-thumbnail[item-left] {
+  .item ion-avatar[item-left],
+  .item ion-thumbnail[item-left] {
     margin-right: 10px;
-    margin-left:1px;
-}
-
-
-
-
-
-
-
-
-
+    margin-left: 1px;
+  }
 }
