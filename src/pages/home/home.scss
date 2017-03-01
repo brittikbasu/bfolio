@@ -18,7 +18,7 @@ page-home {
     height: 39.5vh;
     /*width:84.3%;*/
     width: 100%;
-    background: rgb(91, 42, 104);
+    background: color($colors, primary);
     z-index: 0;
   }
   .my-work-container {
@@ -26,7 +26,7 @@ page-home {
     /* width:84.3%;*/
     width: 100%;
     z-index: 100;
-    background: rgb(114, 46, 106);
+    background: color($colors, secondary);
   }
 
 
@@ -42,12 +42,18 @@ page-home {
     border-radius: 50%;
     overflow: hidden;
     border: solid 3px;
-    border-color: blueviolet;
+    border-color: color($colors, primary);
 }
 
 .item{
   padding-left: 0;
 }
+
+.item.item-block .item-inner {
+    border-bottom: none;
+}
+
+
 .item.item-block .item-inner {
     padding-right: 0px;
 }
@@ -91,7 +97,7 @@ page-home {
 
 }
 
-@media (min-width:374px) and (max-width:413px){
+@media (min-width:374px) and (max-width:410px){
   /*iphone 6*/
   .item h2{
   font-size: 1.5em;
@@ -107,6 +113,13 @@ page-home {
     margin-right: 10px;
     margin-left:1px;
 }
+
+
+
+
+
+
+
 
 
 }
