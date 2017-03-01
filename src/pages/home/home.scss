@@ -1,0 +1,22 @@
+page-home {
+  .header-container {
+    height: 15.8vh;
+    width: 88.2%;
+    background: white;
+    z-index: 10;
+  }
+  .about-me-container {
+    height: 39.5vh;
+    /*width:84.3%;*/
+    width: 100%;
+    background: rgb(91, 42, 104);
+    z-index: 0;
+  }
+  .my-work-container {
+    height: 100%;
+    /* width:84.3%;*/
+    width: 200%;
+    z-index: 100;
+    background: rgb(114, 46, 106);
+  }
+}
