@@ -1,0 +1,36 @@
+page-bravecam {
+
+
+.scroll-content{
+background-color: color($colors, 'secondary');
+}
+
+.intro-container {
+    height: 39.5vh;
+    /*width:84.3%;*/
+    width: 100%;
+    background: color($colors, primary);
+    z-index: 0;
+    text-align: center;
+    color: color($colors, purpledark);
+  }
+
+  .more-container {
+    height: 100%;
+    /* width:84.3%;*/
+    width: 100%;
+    z-index: 100;
+    margin-top: -20px;
+    background: color($colors, secondary);
+    text-align: center;
+    color: color($colors, purplelight);
+  }
+    h1 {
+    font-family: 'Jura', serif;
+    font-size: 1.68em;
+    letter-spacing: 2px;
+  }
+}
+
+
+
