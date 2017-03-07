@@ -8,18 +8,63 @@
       <img src="assets/img/brittik_basu.jpg" />
     </ion-avatar>
     <h2>Brittik Basu</h2>
-    <p>User Experience Designer</p>
+    <p>UX & Brand Identity Designer</p>
     <!--
     <p>Web | UX | Brand Identity</p>
     -->
   </ion-item>
 </ion-header>
 
-<ion-content>
+<ion-content class="animated" >
   <div class="about-me-container">
-        <h1>About Me</h1>
+<button ion-button outline color="purpledark" round style="top:29.5vh" [navPush]="bravecamPage">Read More</button>
   </div>
-  <div class="my-work-container">
-    <h1>My Work</h1>
+  
+  <div class="my-work-container" (tap)="this.content.scrollToBottom();">
+    <h1 style="padding-top:3vh;">My Work</h1>
+
+    <ion-card (click)="this.content.scrollToBottom(); this.openCard.four = !this.openCard.four; this.allCardsClosed = !this.allCardsClosed;" *ngIf="this.allCardsClosed || this.openCard.four">
+      <img src="assets/img/card-madison.png" />
+      <div class="card-title">Safe App</div>
+      <div class="card-subtitle">An app to fight racism in Berlin & Worldwide</div>
+
+    </ion-card>
+
+
+    <ion-card (click)="this.content.scrollToBottom(); this.openCard.two = !this.openCard.two; this.allCardsClosed = !this.allCardsClosed;" *ngIf="this.allCardsClosed || this.openCard.two"
+      [ngClass]="{animated: !allCardsClosed && !openCard.two, fadeOutLeft: !allCardsClosed}">
+      <img src="assets/img/card-huntfactor.jpg" />
+      <div class="card-title">Huntfactor</div>
+      <div class="card-subtitle">An app for an Indian Adventure Startup</div>
+      <button ion-button danger *ngIf="this.openCard.two">omg</button>
+    </ion-card>
+
+
+    <ion-card (click)="this.content.scrollToBottom(); this.openCard.one = !this.openCard.one; this.allCardsClosed = !this.allCardsClosed;" *ngIf="this.allCardsClosed || this.openCard.one">
+      <img src="assets/img/card-polyspares.jpg" />
+      <div class="card-title">Polyspares</div>
+      <div class="card-subtitle">A website for a textile spare parts exporter</div>
+      <button ion-button danger *ngIf="this.openCard.one">omg</button>
+    </ion-card>
+
+
+
+    <ion-card (click)="this.content.scrollToBottom(); this.openCard.three = !this.openCard.three; this.allCardsClosed = !this.allCardsClosed; " *ngIf="this.allCardsClosed || this.openCard.three" id="target">
+      <img src="assets/img/card-sf.png" />
+      <img src="assets/img/card-sf.png" />
+      <div class="card-title">Polizeigewalt</div>
+      <div class="card-subtitle">Logo design for a non profit</div>
+      <button ion-button danger *ngIf="this.openCard.three">omg</button>
+
+    </ion-card>
+
+
+    <div *ngIf="this.openCard.four">
+ <button ion-button outline  color="purplelight" round style="top:40vh" (click)="this.content.scrollToBottom(); this.openCard.four = !this.openCard.four; this.allCardsClosed = !this.allCardsClosed;" >
+      <ion-icon name="close"></ion-icon>
+    </button>
+    </div>
+
   </div>
+
 </ion-content>
