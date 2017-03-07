@@ -23,7 +23,7 @@
   <div class="my-work-container" (tap)="this.content.scrollToBottom();">
     <h1 style="padding-top:3vh;">My Work</h1>
 
-    <ion-card (click)="this.content.scrollToBottom(); this.openCard.four = !this.openCard.four; this.allCardsClosed = !this.allCardsClosed;" *ngIf="this.allCardsClosed || this.openCard.four">
+    <ion-card>
       <img src="assets/img/card-madison.png" />
       <div class="card-title">Safe App</div>
       <div class="card-subtitle">An app to fight racism in Berlin & Worldwide</div>
@@ -31,8 +31,7 @@
     </ion-card>
 
 
-    <ion-card (click)="this.content.scrollToBottom(); this.openCard.two = !this.openCard.two; this.allCardsClosed = !this.allCardsClosed;" *ngIf="this.allCardsClosed || this.openCard.two"
-      [ngClass]="{animated: !allCardsClosed && !openCard.two, fadeOutLeft: !allCardsClosed}">
+    <ion-card>
       <img src="assets/img/card-huntfactor.jpg" />
       <div class="card-title">Huntfactor</div>
       <div class="card-subtitle">An app for an Indian Adventure Startup</div>
@@ -40,7 +39,7 @@
     </ion-card>
 
 
-    <ion-card (click)="this.content.scrollToBottom(); this.openCard.one = !this.openCard.one; this.allCardsClosed = !this.allCardsClosed;" *ngIf="this.allCardsClosed || this.openCard.one">
+    <ion-card>
       <img src="assets/img/card-polyspares.jpg" />
       <div class="card-title">Polyspares</div>
       <div class="card-subtitle">A website for a textile spare parts exporter</div>
@@ -49,22 +48,12 @@
 
 
 
-    <ion-card (click)="this.content.scrollToBottom(); this.openCard.three = !this.openCard.three; this.allCardsClosed = !this.allCardsClosed; " *ngIf="this.allCardsClosed || this.openCard.three" id="target">
+    <ion-card>
       <img src="assets/img/card-sf.png" />
       <img src="assets/img/card-sf.png" />
       <div class="card-title">Polizeigewalt</div>
       <div class="card-subtitle">Logo design for a non profit</div>
       <button ion-button danger *ngIf="this.openCard.three">omg</button>
-
     </ion-card>
-
-
-    <div *ngIf="this.openCard.four">
- <button ion-button outline  color="purplelight" round style="top:40vh" (click)="this.content.scrollToBottom(); this.openCard.four = !this.openCard.four; this.allCardsClosed = !this.allCardsClosed;" >
-      <ion-icon name="close"></ion-icon>
-    </button>
-    </div>
-
   </div>
-
 </ion-content>
