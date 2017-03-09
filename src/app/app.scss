@@ -14,9 +14,6 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
-
-
 *{
   box-sizing: inherit;
 }
@@ -31,7 +28,7 @@ height:23vh;
 
 .bar-button-default, .bar-button-default.bar-button-default, .bar-button-clear-default{
 background: color($colors, 'light');
-color: color($colors, 'danger');
+color: color($colors, 'primary');
 margin-left: 8px;
     margin-top: 8px;
         width: 60px;
@@ -40,7 +37,7 @@ margin-left: 8px;
 
 .back-button-text-ios {
     letter-spacing: -.01em;
-    color: color($colors, 'aquatic');
+    color: color($colors, 'secondary');
 }
 
 .header-background{
@@ -67,7 +64,7 @@ margin-left: 8px;
     height: 16vh;
     width: 100%;
     /*width: 88.2%;*/
-    background: white;
+    background: color($colors, 'light');
     z-index: 10;
     padding-top:0.5vh;
   }
@@ -114,7 +111,7 @@ margin-left: 8px;
     font-family: 'Sarina', serif;
     letter-spacing: 0px;
     margin-left: 6%;
-        color: color($colors, 'danger');
+        color: color($colors, 'primary');
 
 
   }
@@ -124,7 +121,7 @@ margin-left: 8px;
     font-size: 0.85em;
     line-height: normal;
     text-overflow: inherit;
-    color: color($colors, 'aquatic');
+    color: color($colors, 'secondary');
     text-align: left;
     letter-spacing: 3px;
     font-family: 'Jura', serif;
@@ -155,18 +152,21 @@ margin-left: 8px;
 
   
 .tabs .tabbar{
-  background: color($colors, dark);
-  margin-top:-1px;
-      box-shadow: 0 5px 35px -10px color($colors, 'secondary');
+  background-color: color($colors, dark);
+  box-shadow: 0 4px 12px -4px color($colors, 'primary');
+  margin-top:0px;
 
+}
+.tabs[tabsPlacement=top] .tabbar {
+margin-top:-1px;
 }
 
 .tabs .tab-button[aria-selected=true] .tab-button-icon {
-    color: color($colors, danger);
+    color: color($colors, 'primary');
 }
 
 .tabs .tab-button[aria-selected=true] {
-    color: color($colors, 'aquatic');
+    color: color($colors, 'secondary');
 }
 
 .tabs-ios .tab-button-icon {

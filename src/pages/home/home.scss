@@ -1,31 +1,48 @@
 page-home {
   .about-me-container {
-    height: 39.5vh;
+    height: 78vh;
     /*width:84.3%;*/
     width: 100%;
-    background: color($colors, primary);
-    z-index: 0;
+    background: color($colors, 'secondary-dark');
     text-align: center;
-    color: color($colors, purpledark);
+    //color: color($colors, purpledark);
+    padding-top: 1.3vh;
   }
   .my-work-container {
     height: 100%;
     /* width:84.3%;*/
     width: 100%;
-    z-index: 100;
     margin-top: -20px;
-    background: color($colors, secondary);
+    background: color($colors, 'dark');
     text-align: center;
-    color: color($colors, purplelight);
+       // padding-top: 1.3vh;
+
+    // color: color($colors, purplelight);
   }
   h1 {
-    font-family: 'Jura', serif;
-    font-size: 1.68em;
+    font-family: 'Pacifico', serif;
+    font-size: 1.34em;
     letter-spacing: 2px;
+    color: #1BFF29;
   }
   .card {
     height: 14.15vh;
-    margin-top:20px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 12px 1px color($colors, 'primary');
+  }
+  p {
+    overflow: inherit;
+    margin: 0 0 2px;
+    font-size: 1.35em;
+    line-height: normal;
+    text-overflow: inherit;
+    color: color($colors, 'secondary');
+    text-align: center;
+    letter-spacing: 1.7px;
+    font-family: 'Exo 2', serif;
+    margin-bottom: 3.7vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
   }
   ion-card {
     position: relative;
@@ -34,34 +51,30 @@ page-home {
   .card-title {
     position: absolute;
     top: 31%;
-    font-size: 2.0em;
+    font-size: 1.75em;
     width: 100%;
     font-weight: bold;
-    color: color($colors, 'danger');
+    color: #5C27FF;
+    font-family: Jura;
+    letter-spacing: 1.6px;
   }
   .card-subtitle {
-    font-size: 1.0em;
+    font-size: 1.2em;
     position: absolute;
     top: 60%;
     width: 100%;
-    color: color($colors, 'aquatic');
-;
+    font-family: 'Exo 2';
+    color: #E81869;
+    letter-spacing: 0.4px;
   }
-
-
-
-// Aletering my global styles *********************
-
-.header-container{
-  background: color($colors, 'dark');
-}
-//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
+  // Aletering my global styles *********************
+  .header-container {
+    background: color($colors, 'dark');
+  }
+  //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   // Ionic default styles *******************************
-
-.item{
-  background: color($colors, 'dark');
-}
+  .item {
+    background: color($colors, 'dark');
+  }
   //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
 }

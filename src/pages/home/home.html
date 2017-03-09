@@ -17,25 +17,50 @@
 
 <ion-content class="animated" >
   <div class="about-me-container">
-<button ion-button outline color="purpledark" round style="top:29.5vh" [navPush]="bravecamPage">Read More</button>
+    <h1>UX Design</h1>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel semper tellus, eu rhoncus diam. Nulla facilisi.
+    Nunc vel condimentum libero. Maecenas ac neque varius, ullamcorper dolor a, tincidunt ex. Vivamus elementum eget quam ac ullamcorper.
+</p>
+
+<h1>Brand Identity Design</h1>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel semper tellus, eu rhoncus diam. Nulla facilisi.
+    Nunc vel condimentum libero. Maecenas ac neque varius, ullamcorper dolor a, tincidunt ex. Vivamus elementum eget quam ac ullamcorper.
+</p>
+
+
+
+<button ion-button outline color="secondary" round (click)="this.content.scrollToBottom();">My Work</button>
   </div>
   
   <div class="my-work-container" (tap)="this.content.scrollToBottom();">
     <h1 style="padding-top:3vh;">My Work</h1>
 
-    <ion-card>
-      <img src="assets/img/card-madison.png" />
-      <div class="card-title">Safe App</div>
+    <ion-card class="card-overlay" [navPush]="bravecamPage">
+      <img src="assets/img/card-madison.png"/>
+      <div class="card-title">Brave Cam</div>
       <div class="card-subtitle">An app to fight racism in Berlin & Worldwide</div>
 
     </ion-card>
 
 
-    <ion-card>
+    <ion-card [navPush]="chaldiyePage">
       <img src="assets/img/card-huntfactor.jpg" />
-      <div class="card-title">Huntfactor</div>
+      <ion-grid>
+        <ion-row>
+          <ion-col  width-80>
+             <div class="card-title">Chaldiye</div></ion-col>
+          <ion-col>      
+            <button ion-button icon-only>
+  <ion-icon name="arrow-right" colour="primary"></ion-icon>
+</button>
+</ion-col>
+
+        </ion-row>
+     
+      </ion-grid>
       <div class="card-subtitle">An app for an Indian Adventure Startup</div>
-      <button ion-button danger *ngIf="this.openCard.two">omg</button>
     </ion-card>
 
 
@@ -43,7 +68,6 @@
       <img src="assets/img/card-polyspares.jpg" />
       <div class="card-title">Polyspares</div>
       <div class="card-subtitle">A website for a textile spare parts exporter</div>
-      <button ion-button danger *ngIf="this.openCard.one">omg</button>
     </ion-card>
 
 
@@ -53,7 +77,6 @@
       <img src="assets/img/card-sf.png" />
       <div class="card-title">Polizeigewalt</div>
       <div class="card-subtitle">Logo design for a non profit</div>
-      <button ion-button danger *ngIf="this.openCard.three">omg</button>
     </ion-card>
   </div>
 </ion-content>

@@ -12,7 +12,7 @@ background-color: color($colors, 'secondary');
     background: color($colors, primary);
     z-index: 0;
     text-align: center;
-    color: color($colors, purpledark);
+   // color: color($colors, purpledark);
   }
 
   .more-container {
@@ -21,9 +21,9 @@ background-color: color($colors, 'secondary');
     width: 100%;
     z-index: 100;
     margin-top: -20px;
-    background: color($colors, secondary);
+    background: color($colors, 'dark');
     text-align: center;
-    color: color($colors, purplelight);
+   // color: color($colors, purplelight);
   }
     h1 {
     font-family: 'Jura', serif;
