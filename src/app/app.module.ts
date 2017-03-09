@@ -6,6 +6,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { BravecamPage } from '../pages/bravecam/bravecam';
+import { ChaldiyePage } from '../pages/chaldiye/chaldiye';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BravecamPage } from '../pages/bravecam/bravecam';
     ContactPage,
     HomePage,
     TabsPage,
-    BravecamPage
+    BravecamPage,
+    ChaldiyePage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {tabsHideOnSubPages:'true'})
@@ -26,7 +28,8 @@ import { BravecamPage } from '../pages/bravecam/bravecam';
     ContactPage,
     HomePage,
     TabsPage,
-    BravecamPage
+    BravecamPage,
+    ChaldiyePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
