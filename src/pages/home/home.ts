@@ -4,6 +4,7 @@ import { NavController, Content } from 'ionic-angular';
 
 import { BravecamPage } from '../bravecam/bravecam';
 
+import { ChaldiyePage } from '../chaldiye/chaldiye';
 
 @Component({
   selector: 'page-home',
@@ -15,26 +16,8 @@ import { BravecamPage } from '../bravecam/bravecam';
 export class HomePage {
     @ViewChild(Content) content: Content;
     bravecamPage = BravecamPage;
-
-cardOpened : boolean;
-openCard : {
-  one:boolean,
-  two:boolean,
-  three:boolean,
-  four:boolean
-};
+    chaldiyePage = ChaldiyePage;
 allCardsClosed : boolean;
-  constructor(public navCtrl: NavController) {
-    this.allCardsClosed = true;
-    this.cardOpened = false;
-    this.openCard = {
-  one:false,
-  two:false,
-  three:false,
-  four:false
-};
-
-
-  }
+  constructor(public navCtrl: NavController) {}
 }
 
