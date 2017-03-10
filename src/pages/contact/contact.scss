@@ -1,5 +1,21 @@
 page-contact {
-.scroll-content{
+
+ .top-container{
     background-color:#137F75;
+  }
+
+h1{
+   color:#49E80D;
 }
+email-text{
+    color:green;
+}
+
+.button-ios, .button-md{
+  min-width: 25vw;
+    height: 6.7vh;
+    letter-spacing: 2px;
+}
+
+
 }
