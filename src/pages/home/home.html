@@ -15,30 +15,33 @@
   </ion-item>
 </ion-header>
 
-<ion-content class="animated" >
-  <div class="about-me-container">
+<ion-content class="animated">
+  <div class="top-container">
     <h1>UX Design</h1>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel semper tellus, eu rhoncus diam. Nulla facilisi.
-    Nunc vel condimentum libero. Maecenas ac neque varius, ullamcorper dolor a, tincidunt ex. Vivamus elementum eget quam ac ullamcorper.
-</p>
-
-<h1>Brand Identity Design</h1>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel semper tellus, eu rhoncus diam. Nulla facilisi.
-    Nunc vel condimentum libero. Maecenas ac neque varius, ullamcorper dolor a, tincidunt ex. Vivamus elementum eget quam ac ullamcorper.
-</p>
+    <p>
+      As a UX designer, I work with you to design usable solutions that your users need. I develop concepts, personas, storyboards,
+      wireframes and prototypes to clearly communicate these solutions.
 
 
+    </p>
 
-<button ion-button outline color="secondary" round (click)="this.content.scrollToBottom();">My Work</button>
+    <h1>Brand Identity Design</h1>
+    <p>
+      My skills in UX Design translate well into understanding how you wish to be perceived as a brand and enables me to craft
+      your distinctive personality across touchpoints.</p>
+
+    <button ion-button icon-right color="primary" round (click)="this.content.scrollToBottom();">
+  My Work
+  <ion-icon name="arrow-down"></ion-icon>
+</button>
+
   </div>
-  
+
   <div class="my-work-container" (tap)="this.content.scrollToBottom();">
     <h1 style="padding-top:3vh;">My Work</h1>
 
     <ion-card class="card-overlay" [navPush]="bravecamPage">
-      <img src="assets/img/card-madison.png"/>
+      <img src="assets/img/card-madison.png" />
       <div class="card-title">Brave Cam</div>
       <div class="card-subtitle">An app to fight racism in Berlin & Worldwide</div>
 
@@ -47,32 +50,35 @@
 
     <ion-card [navPush]="chaldiyePage">
       <img src="assets/img/card-huntfactor.jpg" />
-      <ion-grid>
-        <ion-row>
-          <ion-col  width-80>
-             <div class="card-title">Chaldiye</div></ion-col>
-          <ion-col>      
-            <button ion-button icon-only>
-  <ion-icon name="arrow-right" colour="primary"></ion-icon>
-</button>
-</ion-col>
 
-        </ion-row>
-     
-      </ion-grid>
+      <div class="card-title">
+        <!--Chaldiye</div>
+       <button ion-button icon-only class="card-title" style="width:10vw; height:10vw;"></button>
+      <button ion-button icon-only style="margin-left: 50vw;margin-top: -62vh;">
+      <ion-icon name="arrow-right" colour="primary"></ion-icon>
+      </button>
+
+-->
+<div class="view-history">
+  <div icon-right color="primary" clear>
+ Chaldiye
+ <!-- <ion-icon name="arrow-forward"></ion-icon>-->
+</div>
+</div>
+      </div>
       <div class="card-subtitle">An app for an Indian Adventure Startup</div>
     </ion-card>
 
 
-    <ion-card>
+    <ion-card [navPush]="polysparesPage">
       <img src="assets/img/card-polyspares.jpg" />
       <div class="card-title">Polyspares</div>
       <div class="card-subtitle">A website for a textile spare parts exporter</div>
     </ion-card>
 
 
-
-    <ion-card>
+ 
+    <ion-card [navPush]="polizeigewaltPage">
       <img src="assets/img/card-sf.png" />
       <img src="assets/img/card-sf.png" />
       <div class="card-title">Polizeigewalt</div>
