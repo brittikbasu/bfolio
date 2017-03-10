@@ -6,6 +6,11 @@ import { BravecamPage } from '../bravecam/bravecam';
 
 import { ChaldiyePage } from '../chaldiye/chaldiye';
 
+import { PolysparesPage } from '../polyspares/polyspares';
+
+import { PolizeigewaltPage } from '../polizeigewalt/polizeigewalt';
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -17,7 +22,9 @@ export class HomePage {
     @ViewChild(Content) content: Content;
     bravecamPage = BravecamPage;
     chaldiyePage = ChaldiyePage;
-allCardsClosed : boolean;
+    polysparesPage = PolysparesPage;
+    polizeigewaltPage = PolizeigewaltPage;
+    allCardsClosed : boolean;
   constructor(public navCtrl: NavController) {}
 }
 
