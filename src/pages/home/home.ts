@@ -1,6 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
 
-import { NavController, Content } from 'ionic-angular';
+import { NavController, Content, AlertController } from 'ionic-angular';
 
 import { BravecamPage } from '../bravecam/bravecam';
 
@@ -24,7 +24,23 @@ export class HomePage {
     chaldiyePage = ChaldiyePage;
     polysparesPage = PolysparesPage;
     polizeigewaltPage = PolizeigewaltPage;
-    allCardsClosed : boolean;
-  constructor(public navCtrl: NavController) {}
+    myAlert: boolean;
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+        this.myAlert = true;
+  }
+
+  ionViewDidLoad() {
+
+let alert = this.alertCtrl.create({
+      title: 'Hi There Awesome Person!',
+      subTitle: 'My website is a work in progress and will be ready by the end of this month (March, 2017).Dont let this stop you from checking it out now :)',
+      buttons: ['OK COOL!']
+    });
+    alert.present();
+
+    
+  }
+
+
 }
 
