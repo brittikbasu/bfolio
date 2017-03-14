@@ -33,7 +33,7 @@ export class HomePage {
 
 let alert = this.alertCtrl.create({
       title: 'Hi There Awesome Person!',
-      subTitle: 'My website is a work in progress and will be ready by the end of this month (March, 2017).Dont let this stop you from checking it out now :)',
+      subTitle: 'My website is a work in progress and will be ready by the end of this month (March, 2017). Dont let this stop you from checking it out now :)',
       buttons: ['OK COOL!']
     });
     alert.present();
