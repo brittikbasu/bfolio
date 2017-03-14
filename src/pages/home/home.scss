@@ -19,11 +19,14 @@ page-home {
     height: 13.5vh;
     margin-top: 20px;
     box-shadow: 0px 0px 12px 1px color($colors, 'primary');
+    background: #000;
   }
   
   ion-card {
     position: relative;
     text-align: center;
+        background: #000;
+
   }
   .card-title {
     position: absolute;
