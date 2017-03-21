@@ -31,6 +31,29 @@ ion-icon {
     padding-left: .4em;
     color: color($colors, bright);
 }
+
+h1{
+        text-align: center;
+}
+p {
+    overflow: inherit;
+    margin: 0 0 2px;
+    font-size: 1.3em;
+    line-height: normal;
+    text-overflow: inherit;
+    color: #3BC8E7;
+    text-align: center;
+    letter-spacing: 1.7px;
+    font-family: 'Exo 2', serif;
+    margin-bottom: 3.7vh;
+    /* margin-left: 3vw; */
+    width: 93vw;
+    /* margin-right: 3vw; */
+}
+
+
+
+
 }
 
 
