@@ -11,24 +11,13 @@ ion-footer{
 //background: color($colors, 'light');
 color: color($colors, 'secondary');
 min-width:20vw;
-/*
-margin-left: 8px;
-margin-right:8px;
-    margin-top: 8px;
-        width: 60px;
-*/
-height: 50px;
+width:30vw;
+
 }
 
-.big-right-button{
-        width:73.5vw;
-}
+.big-right-button{}
 
 ion-icon {
-    font-size: 1.4em;
-    line-height: .67;
-    pointer-events: none;
-    padding-left: .4em;
     color: color($colors, bright);
 }
 
@@ -51,6 +40,11 @@ p {
     /* margin-right: 3vw; */
 }
 
+.center {
+margin-left: auto;
+margin-right: auto;
+display: block;
+}
 
 
 
