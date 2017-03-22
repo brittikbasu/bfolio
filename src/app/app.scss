@@ -65,6 +65,8 @@ height:23vh;
 
 
 
+
+
 // My Styles **************************
 
 .top-container {
@@ -306,4 +308,81 @@ margin-top:-1px;
   }
 
 
+
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+//sub-page styles***********************************************
+.sub-page{
+
+  .scroll-content{
+        background: color($colors, secondary-dark);
+}
+
+ion-footer{
+        background: color($colors, primary-dark)
+}
+
+/*
+.bar-button-default, .bar-button-default.bar-button-default, .bar-button-clear-default{
+//background: color($colors, 'light');
+color: color($colors, 'secondary');
+min-width:20vw;
+width:30vw;
+
+}
+*/
+
+.footer-button-container{
+        width: 84vw;
+    margin: 0 auto;
+}
+.same-size-buttons{
+        min-width:30vw;
+}
+.same-line{
+        display: inline-block;
+}
+
+
+ion-icon {
+    color: color($colors, bright);
+}
+
+h1{
+        text-align: center;
+}
+p {
+    overflow: inherit;
+    margin: 0 0 2px;
+    font-size: 1.3em;
+    line-height: normal;
+    text-overflow: inherit;
+    color: #3BC8E7;
+    text-align: center;
+    letter-spacing: 1.7px;
+    font-family: 'Exo 2', serif;
+    margin-bottom: 3.7vh;
+    /* margin-left: 3vw; */
+    width: 93vw;
+    /* margin-right: 3vw; */
+}
+
+
+}
+
+//*************toolbar/header/footer styles
+.toolbar ion-title{
+width:60vw;
+}
+ion-header{
+        background: color($colors, 'primary');
+}
+ion-footer{
+              background: color($colors, 'primary-dark');
+  
+}
+.toolbar-title{
+        color:color($colors, light);
+}
