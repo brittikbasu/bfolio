@@ -12,11 +12,17 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'bravecam.html'
 })
 export class BravecamPage {
+win: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BravecamPage');
   }
+
+  newTab(url) {
+  this.win = window.open(url, '_blank');
+  this.win.focus();
+}
 
 }

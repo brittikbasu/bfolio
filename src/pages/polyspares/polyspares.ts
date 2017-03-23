@@ -12,11 +12,16 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'polyspares.html'
 })
 export class PolysparesPage {
-
+win :any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PolysparesPage');
   }
+
+    newTab(url) {
+  this.win = window.open(url, '_blank');
+  this.win.focus();
+}
 
 }

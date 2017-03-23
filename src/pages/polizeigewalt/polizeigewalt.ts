@@ -12,11 +12,16 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'polizeigewalt.html'
 })
 export class PolizeigewaltPage {
-
+win: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PolizeigewaltPage');
   }
+
+  newTab(url) {
+  this.win = window.open(url, '_blank');
+  this.win.focus();
+}
 
 }
