@@ -12,11 +12,15 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'chaldiye.html'
 })
 export class ChaldiyePage {
-
+win: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChaldiyePage');
   }
+  newTab(url) {
+  this.win = window.open(url, '_blank');
+  this.win.focus();
+}
 
 }
