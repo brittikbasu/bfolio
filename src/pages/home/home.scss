@@ -1,7 +1,6 @@
 page-home {
-  
-  .top-container{
-        background: color($colors, 'secondary-dark');
+  .top-container {
+    background: color($colors, 'secondary-dark');
   }
   .my-work-container {
     height: 100%;
@@ -10,23 +9,19 @@ page-home {
     margin-top: -20px;
     background: color($colors, 'dark');
     text-align: center;
-       // padding-top: 1.3vh;
-
+    // padding-top: 1.3vh;
     // color: color($colors, purplelight);
   }
-
   .card {
     height: 13.5vh;
     margin-top: 20px;
     box-shadow: 0px 0px 12px 1px color($colors, 'primary');
     background: #000;
   }
-  
   ion-card {
     position: relative;
     text-align: center;
-        background: #000;
-
+    background: #000;
   }
   .card-title {
     position: absolute;
@@ -47,6 +42,5 @@ page-home {
     color: #E81869;
     letter-spacing: 0.4px;
   }
-
   
 }

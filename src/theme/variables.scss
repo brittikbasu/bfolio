@@ -43,7 +43,17 @@ $colors: (
    bright: #1BFF29
 );
 
+$tabs-background: color($colors, dark);
+$tabs-ios-tab-icon-color-active : color($colors, primary);
+$tabs-md-tab-icon-color-active : color($colors, primary);
+$tabs-tab-color-active	:  color($colors, secondary);
+$tabs-ios-tab-icon-color	: rgba(60, 60, 60, 0.7); //inactive tabs icon's outline color 
+$tabs-tab-color-inactive	: rgba(60, 60, 60, 0.7); // inactive tab's font color
+$tabs-ios-border-color: color($colors, primary);
 
+$toolbar-background	: color($colors, primary-dark);
+$toolbar-md-title-text-color : color($colors, light);
+$toolbar-ios-title-text-color	: color($colors, light);
 
 // App iOS Variables
 // --------------------------------------------------
