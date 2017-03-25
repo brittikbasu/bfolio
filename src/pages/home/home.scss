@@ -11,12 +11,14 @@ page-home {
     text-align: center;
     // padding-top: 1.3vh;
     // color: color($colors, purplelight);
+    padding: 0 3%;
   }
   .card {
     height: 13.5vh;
     margin-top: 20px;
     box-shadow: 0px 0px 12px 1px color($colors, 'primary');
     background: #000;
+    background: #134F7F;
   }
   ion-card {
     position: relative;
@@ -26,21 +28,47 @@ page-home {
   .card-title {
     position: absolute;
     top: 27%;
-    font-size: 1.75em;
+    font-size: 1.65em;
     width: 100%;
     font-weight: bold;
-    color: #A101CC;
     font-family: Jura;
     letter-spacing: 1.6px;
+    color: #01F5DE;
+
   }
   .card-subtitle {
     font-size: 1.15em;
     position: absolute;
-    top: 60%;
+    top: 57%;
     width: 100%;
     font-family: 'Exo 2';
-    color: #E81869;
     letter-spacing: 0.4px;
+        color: #0DE858;
+
+  }
+
+  @media (min-width:992px) {
+    .scroll-content{
+        overflow:hidden;
+    }
+      .top-container {
+display:none;
+  }
+
+  .header-container{
+    display:none;
+  }
   }
   
+
+//split-pane*************************
+  
+    .content-ios, .content-md {
+      background-color: #000;
+    }
+
+   
+   
+
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 }

@@ -8,4 +8,10 @@ h1{
    color:#0DE858;
 }
 
+  @media (min-width:992px) {
+  .header-container{
+    display:none;
+  }
+  }
+
 }

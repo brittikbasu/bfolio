@@ -17,5 +17,10 @@ email-text{
     letter-spacing: 2px;
 }
 
-
+  @media (min-width:992px) {
+  .header-container{
+    display:none;
+  }
+  }
+  
 }

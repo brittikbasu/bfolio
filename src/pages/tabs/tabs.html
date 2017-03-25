@@ -1,5 +1,46 @@
-<ion-tabs tabsPlacement="top">
+<ion-split-pane when="lg">
+
+  <!--  our side menu  -->
+  <ion-menu [content]="content" class="tabs-area">
+    <div class="split">
+      <div class="split-container">
+     <div class="header-container">
+  <ion-item class="me-container">
+    <ion-avatar item-left>
+      <img src="assets/img/brittik_basu.jpg" />
+    </ion-avatar>
+    <h2>Brittik Basu</h2>
+    <p>UX & Brand Identity Designer</p>
+    <!--
+    <p>Web | UX | Brand Identity</p>
+    -->
+  </ion-item>
+  </div>
+
+   <div class="top-container">
+    <h1>UX Design</h1>
+    <p>
+      As a UX designer, I work with you to design usable solutions that your users need. I develop concepts, personas, storyboards,
+      wireframes and prototypes to clearly communicate these solutions.
+
+
+    </p>
+
+    <h1>Brand Identity Design</h1>
+    <p>
+      My skills in UX Design translate well into understanding how you wish to be perceived as a brand and enables me to craft
+      your distinctive personality across touchpoints.</p>
+  </div>
+      </div>
+    </div>
+  </ion-menu>
+
+
+<ion-tabs tabsPlacement="top"  main #content>
   <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
   <ion-tab [root]="tab2Root" tabTitle="Blog" tabIcon="book"></ion-tab>
   <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contact"></ion-tab>
 </ion-tabs>
+
+</ion-split-pane>
+
