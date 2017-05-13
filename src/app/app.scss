@@ -33,14 +33,14 @@
 //------------------------------------------------------------------------------
 h1 {
   font-family: 'Pacifico', serif;
-  font-size: 1.4em;
+  font-size: 1.16em;
   letter-spacing: 1px;
   color: #1BFF29;
 }
 
 p {
   margin: 0 0 2px;
-  font-size: 1.5em;
+  font-size: 1.14em;
   line-height: normal;
   text-overflow: inherit;
   color: color($colors, 'secondary');
@@ -175,7 +175,7 @@ p {
   }
   .item p {
     margin: 0 0 2px;
-    font-size: 0.85em;
+    font-size: 0.65em;
     line-height: normal;
     text-overflow: inherit;
     color: color($colors, 'secondary');

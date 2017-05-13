@@ -2,6 +2,12 @@ page-home {
   .top-container {
     background: color($colors, 'secondary-dark');
   }
+  .tabs-area .header-container {
+    height: 20vh;
+      box-shadow: 0 4px 12px -4px color($colors, 'primary'); //margin-top: 0px;
+
+  }
+
   .my-work-container {
     height: 100%;
     /* width:84.3%;*/
@@ -11,7 +17,7 @@ page-home {
     text-align: center;
     // padding-top: 1.3vh;
     // color: color($colors, purplelight);
-    padding: 0 3%;
+    padding: 0 5.9vw;
   }
   .card {
     height: 13.5vh;

@@ -1,20 +1,32 @@
-<ion-header class="tabs-area">
- <div class="header-container">
+
+
+<!--<ion-header class="tabs-area">
+ 
+</ion-header>-->
+
+<ion-content class="tabs-area" fullscreen="true">
+
+
+<ion-slides pager direction="vertical">
+
+  <ion-slide>
+
+
+  <div class="header-container">
   <ion-item class="me-container">
     <ion-avatar item-left>
       <img src="assets/img/brittik_basu.jpg" />
     </ion-avatar>
     <h2>Brittik Basu</h2>
-    <p>UX & Brand Identity Designer</p>
-    <!--
+  <!--  <p>UX & Brand Identity Designer</p>-->
+        <p>UX Designer & Front-end Developer</p>
+<!--
     <p>Web | UX | Brand Identity</p>
     -->
   </ion-item>
   </div>
-</ion-header>
 
-<ion-content class="tabs-area">
-  <div class="top-container">
+  <div class="top-container"  (scroll)="onScroll()">
     <h1>UX Design</h1>
     <p>
       As a UX designer, I work with you to design usable solutions that your users need. I develop concepts, personas, storyboards,
@@ -23,20 +35,36 @@
 
     </p>
 
-    <h1>Brand Identity Design</h1>
-    <p>
+    <h1>Front-end Development</h1>
+    <!--<p>
       My skills in UX Design translate well into understanding how you wish to be perceived as a brand and enables me to craft
       your distinctive personality across touchpoints.</p>
+-->
+      <p>
+      I love bringing my designs to life! Front-end development allows me to do so.
+      I use Angular and Ionic framework to give my web apps a native feel.
+      Progressive web apps are the future!
+      </p>
 
-    <button ion-button icon-right color="primary" round (click)="this.content.scrollToBottom();">
+    <button ion-button icon-right color="primary" round (click)="this.slides.slideNext()">
   My Work
   <ion-icon name="arrow-down"></ion-icon>
 </button>
 
   </div>
 
-  <div class="my-work-container" (tap)="this.content.scrollToBottom();">
-    <h1 style="padding-top:3vh;">My Work</h1>
+
+  </ion-slide>
+
+
+
+
+
+
+
+
+  <ion-slide class="my-work-container">
+    <h1>My Work</h1>
 
     <ion-card class="card-overlay" [navPush]="bravecamPage">
       <!--<img src="assets/img/card-madison.png" />-->
@@ -81,5 +109,12 @@
       <div class="card-title">Polizeigewalt</div>
       <div class="card-subtitle">Logo design for a non profit</div>
     </ion-card>
-  </div>
+    </ion-slide>
+
+  <ion-slide>
+    <h2>Slide 3</h2>
+  </ion-slide>
+
+</ion-slides>
+
 </ion-content>
