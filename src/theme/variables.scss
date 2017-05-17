@@ -55,6 +55,17 @@ $toolbar-background	: color($colors, dark);
 $toolbar-md-title-text-color : color($colors, light);
 $toolbar-ios-title-text-color	: color($colors, light);
 
+// Custom Variables
+
+  $headline:  'Pacifico', sans-serif;
+  $text:   'Exo 2', sans-serif;
+$decorative-headline: 'Sarina', sans-serif;
+$decorative-text: 'Jura', sans-serif;
+
+
+
+
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
