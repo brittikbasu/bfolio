@@ -1,6 +1,8 @@
 import { Component, ViewChild} from '@angular/core';
 
-import { NavController, Content, AlertController, Slides } from 'ionic-angular';
+import { NavController, AlertController, Slides } from 'ionic-angular';
+
+import { WorkPage } from '../work/work';
 
 import { BravecamPage } from '../bravecam/bravecam';
 
@@ -9,6 +11,8 @@ import { ChaldiyePage } from '../chaldiye/chaldiye';
 import { PolysparesPage } from '../polyspares/polyspares';
 
 import { PolizeigewaltPage } from '../polizeigewalt/polizeigewalt';
+
+
 
 @Component({
   selector: 'page-home',
@@ -20,6 +24,7 @@ import { PolizeigewaltPage } from '../polizeigewalt/polizeigewalt';
 export class HomePage {
   //  @ViewChild(Content) content: Content;
   @ViewChild(Slides) slides: Slides;
+    workPage = WorkPage;
     bravecamPage = BravecamPage;
     chaldiyePage = ChaldiyePage;
     polysparesPage = PolysparesPage;
