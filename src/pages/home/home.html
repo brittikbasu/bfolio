@@ -1,120 +1,79 @@
-
-
 <!--<ion-header class="tabs-area">
- 
-</ion-header>-->
-
-<ion-content class="tabs-area" fullscreen="true">
+ </ion-header>-->
 
 
-<ion-slides pager direction="vertical">
-
-  <ion-slide>
-
-
-  <div class="header-container">
+<ion-header class="header-container" *ngIf="showLogo">
+ <!-- <ion-navbar>
+    <ion-title>about</ion-title>
+  </ion-navbar>
+-->
   <ion-item class="me-container">
     <ion-avatar item-left>
       <img src="assets/img/brittik_basu.jpg" />
     </ion-avatar>
     <h2>Brittik Basu</h2>
-  <!--  <p>UX & Brand Identity Designer</p>-->
-        <p>UX Designer & Front-end Developer</p>
-<!--
+    <!--  <p>UX & Brand Identity Designer</p>-->
+    <p>UX Designer & Front-end Developer</p>
+    <!--
     <p>Web | UX | Brand Identity</p>
     -->
   </ion-item>
-  </div>
+</ion-header>
 
-  <div class="top-container"  (scroll)="onScroll()">
-    <h1>UX Design</h1>
-    <p>
-      As a UX designer, I work with you to design usable solutions that your users need. I develop concepts, personas, storyboards,
-      wireframes and prototypes to clearly communicate these solutions.
+<ion-content class="tabs-area" fullscreen="true">
+  <ion-slides pager direction="vertical">
 
-
-    </p>
-
-    <h1>Front-end Development</h1>
-    <!--<p>
-      My skills in UX Design translate well into understanding how you wish to be perceived as a brand and enables me to craft
-      your distinctive personality across touchpoints.</p>
--->
-      <p>
-      I love bringing my designs to life! Front-end development allows me to do so.
-      I use Angular and Ionic framework to give my web apps a native feel.
-      Progressive web apps are the future!
-      </p>
-
-    <button ion-button icon-right color="primary" round (click)="this.slides.slideNext()">
+    <ion-slide class="slide-about">
+    <!-- <page-about></page-about>-->
+<ion-footer no-border style="margin-bottom:9vh">
+        <ion-toolbar>
+ <button ion-button icon-right color="secondary" round (click)="this.slides.slideNext(); this.slideChanged()" when="sm">
   My Work
   <ion-icon name="arrow-down"></ion-icon>
 </button>
+        </ion-toolbar>
+     </ion-footer>
 
-  </div>
-
-
-  </ion-slide>
-
-
-
-
-
-
-
-
-  <ion-slide class="my-work-container">
-    <h1>My Work</h1>
-
-    <ion-card class="card-overlay" [navPush]="bravecamPage">
-      <!--<img src="assets/img/card-madison.png" />-->
-      <div class="card-title">Brave Cam</div>
-      <div class="card-subtitle">An app to fight racism in Berlin & Worldwide</div>
-
-    </ion-card>
-
-
-    <ion-card [navPush]="chaldiyePage">
-     <!-- <img src="assets/img/card-huntfactor.jpg" />-->
-
-      <div class="card-title">
-        <!--Chaldiye</div>
-       <button ion-button icon-only class="card-title" style="width:10vw; height:10vw;"></button>
-      <button ion-button icon-only style="margin-left: 50vw;margin-top: -62vh;">
-      <ion-icon name="arrow-right" colour="primary"></ion-icon>
-      </button>
-
--->
-<div class="view-history">
-  <div icon-right color="primary" clear>
- Chaldiye
- <!-- <ion-icon name="arrow-forward"></ion-icon>-->
-</div>
-</div>
-      </div>
-      <div class="card-subtitle">An app for an Indian Adventure Startup</div>
-    </ion-card>
-
-
-    <ion-card [navPush]="polysparesPage">
-     <!-- <img src="assets/img/card-polyspares.jpg" />-->
-      <div class="card-title">Polyspares</div>
-      <div class="card-subtitle">A website for a textile spare parts exporter</div>
-    </ion-card>
-
-
- 
-    <ion-card [navPush]="polizeigewaltPage">
-<!--      <img src="assets/img/card-sf.png" /> -->
-      <div class="card-title">Polizeigewalt</div>
-      <div class="card-subtitle">Logo design for a non profit</div>
-    </ion-card>
     </ion-slide>
 
-  <ion-slide>
-    <h2>Slide 3</h2>
-  </ion-slide>
+    <ion-slide class="slide-work">
+      <ion-header no-border>
+        <ion-toolbar>
+        <button ion-button round (click)="this.slides.slidePrev(); this.slideChanged()" class="slide-up"><ion-icon name="arrow-up"></ion-icon></button>
+        </ion-toolbar>
+      </ion-header>
+     <!--<page-work></page-work>-->
+     
+     <ion-footer no-border style="margin-bottom:9vh">
+        <ion-toolbar>
+ <button ion-button icon-right color="secondary" round (click)="this.slides.slideNext()" when="sm">
+  Get in touch
+  <ion-icon name="arrow-down"></ion-icon>
+</button>
+        </ion-toolbar>
+     </ion-footer>
 
-</ion-slides>
+     
+    </ion-slide>
 
+    <ion-slide class="slide-contact">
+      <ion-header no-border>
+        <ion-toolbar>
+        <button ion-button round (click)="this.slides.slidePrev()" class="slide-up"><ion-icon name="arrow-up"></ion-icon></button>
+        </ion-toolbar>
+      </ion-header>
+
+
+ <ion-footer no-border style="margin-bottom:9vh">
+        <ion-toolbar>
+ <button ion-button icon-right color="secondary" round (click)="this.slides.slideNext()" when="sm">
+  Message me
+  <ion-icon name="paper-plane"></ion-icon>
+</button>
+        </ion-toolbar>
+     </ion-footer>
+
+    </ion-slide>
+
+  </ion-slides>
 </ion-content>

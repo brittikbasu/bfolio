@@ -1,3 +1,43 @@
 page-work {
-
+ /*.my-work-container {
+   
+    margin-top: -20px;        //important
+        padding: 0 5.9vw;     //important
+                           
+    background: color($colors, 'primary-dark'); 
+    text-align: center; 
+  }
+  */
+  .work-container{
+    margin-top:-21%;
+  }
+  .card {
+    height: 13.5vh;
+    margin-top: 20px;
+    box-shadow: 0px 0px 12px 1px color($colors, 'primary'); //background: #000;
+    background: #134F7F;
+  }
+  ion-card {
+    position: relative;
+    text-align: center; //background: #000;
+  }
+  .card-title {
+    position: absolute;
+    top: 27%;
+    font-size: 1.65em;
+    width: 100%;
+    font-weight: bold;
+    font-family: $decorative-text;
+    letter-spacing: 1.6px;
+    color: #0DE858;
+  }
+  .card-subtitle {
+    font-size: 1.15em;
+    position: absolute;
+    top: 57%;
+    width: 100%;
+    font-family: $text;
+    letter-spacing: 0.4px;
+    color: #01F5DE;
+  }
 }

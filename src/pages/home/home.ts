@@ -2,15 +2,9 @@ import { Component, ViewChild} from '@angular/core';
 
 import { NavController, AlertController, Slides } from 'ionic-angular';
 
+import { AboutPage } from '../about/about';
+
 import { WorkPage } from '../work/work';
-
-import { BravecamPage } from '../bravecam/bravecam';
-
-import { ChaldiyePage } from '../chaldiye/chaldiye';
-
-import { PolysparesPage } from '../polyspares/polyspares';
-
-import { PolizeigewaltPage } from '../polizeigewalt/polizeigewalt';
 
 
 
@@ -24,13 +18,12 @@ import { PolizeigewaltPage } from '../polizeigewalt/polizeigewalt';
 export class HomePage {
   //  @ViewChild(Content) content: Content;
   @ViewChild(Slides) slides: Slides;
+    aboutPage = AboutPage;
     workPage = WorkPage;
-    bravecamPage = BravecamPage;
-    chaldiyePage = ChaldiyePage;
-    polysparesPage = PolysparesPage;
-    polizeigewaltPage = PolizeigewaltPage;
+    showLogo : boolean;
    // myAlert: boolean;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+        this.showLogo=true;
   }
 
 onScroll(){
@@ -46,6 +39,19 @@ let alert = this.alertCtrl.create({
     alert.present();
 */
     
+  }
+
+
+ slideChanged() {
+    let currentIndex = this.slides.getActiveIndex();
+    console.log("Current index is", currentIndex);
+    if(currentIndex > 0){
+    this.showLogo=false;
+  }
+  else{
+        this.showLogo=true;
+
+  }
   }
 
 

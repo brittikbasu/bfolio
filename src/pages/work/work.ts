@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
+
 import { NavController, NavParams } from 'ionic-angular';
+
+import { BravecamPage } from '../bravecam/bravecam';
+
+import { ChaldiyePage } from '../chaldiye/chaldiye';
+
+import { PolysparesPage } from '../polyspares/polyspares';
+
+import { PolizeigewaltPage } from '../polizeigewalt/polizeigewalt';
 
 /*
   Generated class for the Work page.
@@ -12,7 +21,10 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'work.html'
 })
 export class WorkPage {
-
+bravecamPage = BravecamPage;
+    chaldiyePage = ChaldiyePage;
+    polysparesPage = PolysparesPage;
+    polizeigewaltPage = PolizeigewaltPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {

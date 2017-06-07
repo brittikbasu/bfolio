@@ -1,10 +1,12 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { BrowserModule } from '@angular/platform-browser';
 import { MyApp } from './app.component';
 import { BlogPage } from '../pages/blog/blog';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { AboutPage } from '../pages/about/about';
 import { WorkPage } from '../pages/work/work';
 import { BravecamPage } from '../pages/bravecam/bravecam';
 import { ChaldiyePage } from '../pages/chaldiye/chaldiye';
@@ -19,6 +21,7 @@ import { PolizeigewaltPage } from '../pages/polizeigewalt/polizeigewalt';
     ContactPage,
     HomePage,
     TabsPage,
+    AboutPage,
     WorkPage,
     BravecamPage,
     ChaldiyePage,
@@ -26,7 +29,25 @@ import { PolizeigewaltPage } from '../pages/polizeigewalt/polizeigewalt';
     PolizeigewaltPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp, {tabsHideOnSubPages:'true'})
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages:'true',
+    tabsPlacement: 'top',
+  platforms: {
+    ios: {
+      tabsPlacement: 'bottom'
+    },
+    android: {
+      tabsPlacement: 'bottom'
+    },
+    core: {
+            tabsPlacement: 'top'
+    },
+    mobileweb:{
+                  tabsPlacement: 'bottom'
+
+    }
+  }}),
+     BrowserModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,6 +56,7 @@ import { PolizeigewaltPage } from '../pages/polizeigewalt/polizeigewalt';
     ContactPage,
     HomePage,
     TabsPage,
+    AboutPage,
     WorkPage,
     BravecamPage,
     ChaldiyePage,
