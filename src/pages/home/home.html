@@ -1,77 +1,69 @@
-<!--<ion-header class="tabs-area">
- </ion-header>-->
-
-
-<ion-header class="header-container" *ngIf="showLogo">
- <!-- <ion-navbar>
-    <ion-title>about</ion-title>
-  </ion-navbar>
--->
+<ion-header class="header-container">
   <ion-item class="me-container">
-    <ion-avatar item-left>
-      <img src="assets/img/brittik_basu.jpg" />
+    <ion-avatar item-left (click)="this.slides.slideTo(0,500)">
+      <img src="{{slidesData[slideNo].img}}" />
     </ion-avatar>
-    <h2>Brittik Basu</h2>
-    <!--  <p>UX & Brand Identity Designer</p>-->
-    <p>UX Designer & Front-end Developer</p>
-    <!--
-    <p>Web | UX | Brand Identity</p>
-    -->
+    <h2 [class.secondary-bright]="secondaryBright">{{slidesData[slideNo].headline}}</h2>
+    <p>{{slidesData[slideNo].paragraph}}</p>
   </ion-item>
 </ion-header>
-
 <ion-content class="tabs-area" fullscreen="true">
-  <ion-slides pager direction="vertical">
+  <ion-slides pager direction="vertical" (ionSlideDidChange)="slideChanged()">
 
     <ion-slide class="slide-about">
-    <!-- <page-about></page-about>-->
-<ion-footer no-border style="margin-bottom:9vh">
+       <page-about></page-about>
+
+<!--
+      <ion-card  margin style="max-width:25vw; min-height:42vh; background:transparent; color:aqua;">
+  <ion-card-header>
+    UX Design
+  </ion-card-header>
+  <ion-card-content>
+    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+  </ion-card-content>
+</ion-card>
+-->
+
+      <ion-footer no-border class="slide-footer">
         <ion-toolbar>
- <button ion-button icon-right color="secondary" round (click)="this.slides.slideNext(); this.slideChanged()" when="sm">
+          <button ion-button icon-right color="secondary" round (click)="this.slides.slideNext(); this.slideChanged()" when="sm">
   My Work
   <ion-icon name="arrow-down"></ion-icon>
 </button>
         </ion-toolbar>
-     </ion-footer>
+      </ion-footer>
 
     </ion-slide>
 
     <ion-slide class="slide-work">
       <ion-header no-border>
         <ion-toolbar>
-        <button ion-button round (click)="this.slides.slidePrev(); this.slideChanged()" class="slide-up"><ion-icon name="arrow-up"></ion-icon></button>
+                  <button ion-button round (click)="this.slides.slidePrev()" class="slide-up"><ion-icon name="arrow-up"></ion-icon></button>
+
         </ion-toolbar>
       </ion-header>
-     <!--<page-work></page-work>-->
-     
-     <ion-footer no-border style="margin-bottom:9vh">
+      <page-work></page-work>
+
+
+      <ion-footer no-border class="slide-footer">
         <ion-toolbar>
- <button ion-button icon-right color="secondary" round (click)="this.slides.slideNext()" when="sm">
+          <button ion-button icon-right outline color="primary-light" round (click)="this.slides.slideNext()" when="sm">
   Get in touch
   <ion-icon name="arrow-down"></ion-icon>
 </button>
         </ion-toolbar>
-     </ion-footer>
+      </ion-footer>
 
-     
+
     </ion-slide>
 
     <ion-slide class="slide-contact">
       <ion-header no-border>
         <ion-toolbar>
-        <button ion-button round (click)="this.slides.slidePrev()" class="slide-up"><ion-icon name="arrow-up"></ion-icon></button>
+          <button ion-button round (click)="this.slides.slidePrev()" class="slide-up" style="position:fixed"><ion-icon name="arrow-up"></ion-icon></button>
         </ion-toolbar>
       </ion-header>
-
-
- <ion-footer no-border style="margin-bottom:9vh">
-        <ion-toolbar>
- <button ion-button icon-right color="secondary" round (click)="this.slides.slideNext()" when="sm">
-  Message me
-  <ion-icon name="paper-plane"></ion-icon>
-</button>
-        </ion-toolbar>
-     </ion-footer>
+<page-contact></page-contact>
 
     </ion-slide>
 

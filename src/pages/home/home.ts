@@ -18,12 +18,37 @@ import { WorkPage } from '../work/work';
 export class HomePage {
   //  @ViewChild(Content) content: Content;
   @ViewChild(Slides) slides: Slides;
+
     aboutPage = AboutPage;
     workPage = WorkPage;
-    showLogo : boolean;
+    about : boolean;
+    work : boolean;
+    contact : boolean;
+    slidesData: any;
+    slideNo : number;
+    secondaryBright:boolean;
    // myAlert: boolean;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-        this.showLogo=true;
+    this.slideNo = 0;
+      this.about = true;
+this.secondaryBright = false;
+      this.slidesData = [{
+          img:"assets/img/brittik_basu.jpg",
+          headline:"Brittik Basu",
+          paragraph: "UX Designer & Front-end Developer"
+      },
+       {
+          img:"assets/img/brittik_basu.jpg",
+          headline:"My Work",
+          paragraph: "Exciting projects I've worked on"
+        }, 
+        {
+          img:"assets/img/brittik_basu.jpg",
+          headline:"Get in Touch",
+          paragraph: "hello(at)brittikbasu.com"
+        }];
+       
+
   }
 
 onScroll(){
@@ -41,18 +66,53 @@ let alert = this.alertCtrl.create({
     
   }
 
+ goToSlide() {
+    this.slides.slideTo(2, 500);
+  }
 
  slideChanged() {
-    let currentIndex = this.slides.getActiveIndex();
-    console.log("Current index is", currentIndex);
-    if(currentIndex > 0){
-    this.showLogo=false;
-  }
-  else{
-        this.showLogo=true;
+   if(this.slides.getActiveIndex() >2){
+     console.log("Treason");
+   }
+   else{
+
+this.slideNo = this.slides.getActiveIndex();
+    console.log("Current index is", this.slideNo);
+    if(this.slideNo == 0){
+      this.secondaryBright = false;
+
+    this.about=true;
+            this.contact=false;
+        this.work=false;
+        console.log("on about slide");
+            this.slides.slideTo(0, 500);
 
   }
+  else if(this.slideNo ==1){
+        this.work=true;
+        this.about=false;
+        this.contact=false;
+        console.log("on work slide");
+        this.slides.slideTo(1, 500);
+        window.setTimeout(()=> this.secondaryBright = true, 750);
+
+
   }
+  else if(this.slideNo == 2) {
+        this.contact=true;
+             this.work=false;
+        this.about=false;
+        console.log("on contact slide");
+            this.slides.slideTo(2, 500);
+        window.setTimeout(()=> this.secondaryBright = true, 350);
+
+  }
+
+
+   }
+    
+  }
+
 
 
 }
