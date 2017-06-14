@@ -1,5 +1,15 @@
 page-contact {
   
+  .contact-container{
+    height:100%;
+    width:100%;
+    margin-top:11.5vh;
+  }
+
+p{
+  color: color($colors, primary-dark);
+}
+
   .contact-header{
   }
   h1 {
