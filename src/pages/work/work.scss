@@ -1,5 +1,5 @@
 page-work {
- /*.my-work-container {
+  /*.my-work-container {
    
     margin-top: -20px;        //important
         padding: 0 5.9vw;     //important
@@ -8,14 +8,25 @@ page-work {
     text-align: center; 
   }
   */
-  .work-container{
-    margin-top:-21%;
+  .work-container {
+    //padding-top: 8.8vh;
+    @media(min-width: 600px) {
+      padding-top: inherit;
+      margin-top: -$header-height*0.7;
+      ;
+    }
   }
   .card {
-    height: 13.5vh;
-    margin-top: 20px;
-    box-shadow: 0px 0px 12px 1px color($colors, 'primary'); //background: #000;
-    background: #134F7F;
+    height: 14.5vh;
+    box-shadow: 0px -3px 12px 2px #155968;    background: #134F7F;
+    width: 83.73%;
+    margin: 6.4% auto;
+    @include mq(laptop) {
+      height: 60vh;
+      width: 20%;
+      display: inline-block;
+      margin: 22px;
+    }
   }
   ion-card {
     position: relative;
@@ -30,8 +41,16 @@ page-work {
     font-family: $decorative-text;
     letter-spacing: 1.6px;
     color: #0DE858;
+    @include mq(iphone5) {
+      //iphone5
+      font-size: 1.38em;
+    }
+    @include mq(laptop) {
+      top: 7%;
+    }
   }
   .card-subtitle {
+    margin-left: -10%;
     font-size: 1.15em;
     position: absolute;
     top: 57%;
@@ -39,5 +58,42 @@ page-work {
     font-family: $text;
     letter-spacing: 0.4px;
     color: #01F5DE;
+    @include mq(iphone5) {
+      //iphone5
+      font-size: 0.99em;
+    }
+    @include mq(laptop) {
+      margin-left: 0;
+      top: 14.5%;
+    }
+  }
+  .card-arrow {
+    float: right;
+    margin-top: 2.6%;
+    margin-right: 1.3em;
+    @include mq(laptop) {
+      display: none;
+    }
+  }
+  .card-image {
+    display:none;
+    @include mq(laptop){
+      display:inline-block;
+    margin-top: 8vw; //37%
+    margin-bottom: 7%;
+    height: 70%;
+    width: 100%;
+    }
+  }
+  .card-button {
+    display: none;
+    @include mq(laptop) {
+      bottom: -1%;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      height: 9%;
+      z-index: 100;
+    }
   }
 }

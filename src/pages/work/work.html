@@ -15,43 +15,51 @@
 
 -->
 <div class="work-container">
-<h1>My Work</h1>
+  <!--<h1>My Work</h1>-->
 
-      <ion-card [navPush]="bravecamPage">
-        <!--<img src="assets/img/card-madison.png" />-->
-        <div class="card-title">Brave Cam
-          <ion-icon name="arrow-forward" color="secondary-light" style="float: right; margin-right: 1.3em;"></ion-icon>
+  <ion-card [navPush]="bravecamPage">
+    <div class="card-title">Brave Cam
+      <ion-icon name="arrow-forward" color="secondary-light" class="card-arrow"></ion-icon>
+    </div>
+    <div class="card-subtitle">Android app to fight racism</div>
+            <img class="card-image" src="assets/img/card-madison.png" />
+
+    <button ion-button full color="secondary-light" class="card-button">Know More</button>
+
+  </ion-card>
+
+  <ion-card [navPush]="chaldiyePage">
+    <div class="card-title">
+      <div class="view-history">
+        <div>
+          Chaldiye
+          <ion-icon name="arrow-forward" color="secondary-light" class="card-arrow"></ion-icon>
         </div>
-        <div class="card-subtitle">An app to fight racism in Berlin & Worldwide</div>
-      </ion-card>
+      </div>
+    </div>
+    <div class="card-subtitle">App for an Adventure Startup</div>
+        <img class="card-image" src="assets/img/card-huntfactor.jpg" />
 
-      <ion-card [navPush]="chaldiyePage">
-        <!-- <img src="assets/img/card-huntfactor.jpg" />-->
-        <div class="card-title">
-          <div class="view-history">
-            <div>
-              Chaldiye
-              <ion-icon name="arrow-forward" color="secondary-light" style="float: right; margin-right: 1.3em;"></ion-icon>
-            </div>
-          </div>
-        </div>
-        <div class="card-subtitle">An app for an Indian Adventure Startup</div>
-      </ion-card>
+    <button ion-button full color="secondary-light" class="card-button">Know More</button>
 
-      <ion-card [navPush]="polysparesPage">
-        <!-- <img src="assets/img/card-polyspares.jpg" />-->
-        <div class="card-title">Polyspares
-          <ion-icon name="arrow-forward" color="secondary-light" style="float: right; margin-right: 1.3em;"></ion-icon>
-        </div>
-        <div class="card-subtitle">A website for a textile spare parts exporter</div>
-      </ion-card>
+  </ion-card>
 
-      <ion-card [navPush]="polizeigewaltPage">
-        <!--      <img src="assets/img/card-sf.png" /> -->
-        <div class="card-title">Polizeigewalt
+  <ion-card [navPush]="polysparesPage">
+    <div class="card-title">Polyspares
+      <ion-icon name="arrow-forward" color="secondary-light" class="card-arrow"></ion-icon>
+    </div>
+    <div class="card-subtitle">Website for spares exporter</div>
+                <img class="card-image" src="assets/img/card-polyspares.jpg" />
+
+    <button ion-button full color="secondary-light" class="card-button">Know More</button>
+  </ion-card>
+
+  <!-- <ion-card [navPush]="polizeigewaltPage">-->
+  <!--      <img src="assets/img/card-sf.png" /> -->
+  <!--<div class="card-title">Polizeigewalt
           <ion-icon name="arrow-forward" color="secondary-light" style="float: right; margin-right: 1.3em;"></ion-icon>
         </div>
         <div class="card-subtitle">Logo design for a non profit</div>
       </ion-card>
-
+-->
 </div>
