@@ -1,138 +1,86 @@
 page-home {
-.header-container {
-    height: 20.2%;
-    width: 100%;
-    background: color($colors, 'dark');
-    z-index: 10;
-    padding-top: 0.5%;
-    box-shadow: 0 4px 12px -4px color($colors, 'secondary'); //margin-top: 0px;
-    @media(min-width:600px){
-          height: $header-height;
-    }
-  }
-.me-container {
-    height: 100%;
-    width: 282px;
-    width: 88.3%;
-    margin: 0 auto;
-  } //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  //item & avatar styles************************************
-  .item {
-    background: color($colors, 'dark');
-  }
-  .item ion-avatar img {
-    width: 78px;
-    height: 78px;
-    height: 19%;
-    border-radius: 50%;
-    overflow: hidden;
-    border: solid 3px;
-    border-color: color($colors, secondary); //@
-  }
-  .item {
-    padding-left: 0;
-  }
-  .item.item-block .item-inner {
-    border-bottom: none;
-  }
-  .item.item-block .item-inner {
-    padding-right: 0px;
-  }
-  .label {
-    margin: 0 0 0 0;
-  }
-  .item h2 {
-    margin: 0 0 2px;
-    font-size: 1.7em;
-    font-weight: normal;
-    font-family: $decorative-headline;
-    letter-spacing: 0px;
-    margin-left: 6%;
-    color: color($colors, 'secondary'); //@
-    @media (min-width: 319px) and (max-width:374px) {
-      //font-size: 1.3em;
-      //iphone 5
-    }
-    @media (min-width:374px) and (max-width:410px) {
-      /*iphone 6*/
-      // font-size: 1.5em;
-    }
-  }
-  .item p {
-    margin: 0 0 2px;
-    font-size: 0.65em;
-    line-height: normal;
-    text-overflow: inherit;
-    color: color($colors, 'secondary-text');
-    text-align: left;
-    letter-spacing: 3px;
-    font-family: $decorative-text;
-    @media (min-width: 319px) and (max-width:374px) {
-      //font-size: 0.558em;
-    }
-    @media (min-width:374px) and (max-width:410px) {
-      // font-size: 0.735em;
-    }
-  }
-  .item ion-avatar[item-left],
-  .item ion-thumbnail[item-left] {
-    margin-right: 10px;
-    margin-left: 1px;
-  } //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 
-
-
-
-  ion-slides{
-    @media(min-width:600px){
-     margin-top: -$header-height;
-    height: ($header-height*5.7);
-    }
-  }
-  .toolbar-background {
-    background: transparent;
-  }
   @mixin slide-up-button {
     .slide-up {
-      margin-top: -2.5%;
-      width: 24%;
+      width: 1%;
+      font-size: 2.5vh;
+      z-index: 100;
+      right: 1.3%;
+      margin-top: -71vh;
       @content;
     }
   }
+  
+    .secondary-bright{
+      
+    color: color($colors, secondary-bright);
+  }
+
+   .button-ios {
+    @include mq(iphone5) {
+      height: 2.5em;
+    }
+  }
+  
+  .swiper-container-vertical>.swiper-pagination-bullets {
+    right: 3vw;
+    top: 50%;
+    -webkit-transform: translate3d(0px, -50%, 0);
+    transform: translate3d(0px, -50%, 0);
+  }
+
+  .toolbar-background {
+    background: transparent;
+  }
+  
+
+  // =============================================== slides //
+  
+    ion-slides {
+    @include mq(laptop) {
+      margin-top: -$header-height;
+      height: ($header-height*5.7);
+    }
+    
+    .slide-footer{
+      margin-bottom: $header-height*0.8;
+      @include mq(laptop){
+              margin-bottom: $header-height*0.35;
+
+      }
+    }
+    
+  }
   .slide-about {
     background: color($colors, 'primary');
-    margin-top:-22vh;
+   margin-top: -$header-height*1.2;
+    @include mq(laptop) {
+      background: color($colors, 'dark');
+         margin-top: 0;
+
+    }
   }
+
   .slide-work {
     background: color($colors, 'primary-dark');
     @include slide-up-button {
-      background-color: rgba(color($colors, primary), 0.25);
+      // background-color: rgba(color($colors, primary), 0.25);
     }
   }
   .slide-contact {
-    background: color($colors, 'primary');
+    background: color($colors, 'secondary');
     @include slide-up-button {
-      background-color: rgba(color($colors, primary-dark), 0.25);
+      // background-color: rgba(color($colors, primary-dark), 0.25);
     }
-    .button-inner{
+    .button-inner {
       color: color($colors, secondary-text);
     }
   }
-  /*
-  @media (min-width:992px) {
-    .scroll-content {
-      overflow: hidden;
-    }
-    .top-container {
-      display: none;
-    }
-    .header-container {
-      display:none;
-    }
-  } 
-  */ //split-pane*************************
+
+  //---------------------------------------------------------------
+  //split-pane*************************
   .content-ios,
   .content-md {
     background-color: #000;
