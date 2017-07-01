@@ -11,22 +11,25 @@
   <ion-slides pager direction="vertical" (ionSlideDidChange)="slideChanged()">
 
     <ion-slide class="slide-about">
-       <page-about></page-about>
-
-<!--
-      <ion-card  margin style="max-width:25vw; min-height:42vh; background:transparent; color:aqua;">
-  <ion-card-header>
-    UX Design
-  </ion-card-header>
-  <ion-card-content>
-    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-  </ion-card-content>
-</ion-card>
--->
-
+      <page-about></page-about>
       <ion-footer no-border class="slide-footer">
         <ion-toolbar>
-          <button ion-button icon-right color="secondary" round (click)="this.slides.slideNext(); this.slideChanged()" when="sm">
+          <button ion-button icon-right color="secondary-text" outline round (click)="this.slides.slideNext(); this.slideChanged()" when="sm">
+  My Skills
+  <ion-icon name="arrow-down"></ion-icon>
+</button>
+
+        </ion-toolbar>
+      </ion-footer>
+
+    </ion-slide>
+
+    <ion-slide class="slide-skills">
+      <page-skills></page-skills>
+      <ion-footer no-border class="slide-footer">
+        <div class="blur-bg"></div>
+        <ion-toolbar>
+          <button ion-button icon-right color="secondary-text"  outline class="next-slide-button" round (click)="this.slides.slideNext(); this.slideChanged()" when="sm">
   My Work
   <ion-icon name="arrow-down"></ion-icon>
 </button>
@@ -38,34 +41,31 @@
     <ion-slide class="slide-work">
       <ion-header no-border>
         <ion-toolbar>
-                  <button ion-button round (click)="this.slides.slidePrev()" class="slide-up"><ion-icon name="arrow-up"></ion-icon></button>
+          <button ion-button round (click)="this.slides.slidePrev()" class="slide-up"><ion-icon name="arrow-up"></ion-icon></button>
 
         </ion-toolbar>
       </ion-header>
       <page-work></page-work>
-
-
       <ion-footer no-border class="slide-footer">
+                <div class="blur-bg"></div>
         <ion-toolbar>
-          <button ion-button icon-right outline color="primary-light" round (click)="this.slides.slideNext()" when="sm">
+          <button ion-button color="primary" icon-right outline class="next-slide-button" round (click)="this.slides.slideNext()" when="sm">
   Get in touch
   <ion-icon name="arrow-down"></ion-icon>
 </button>
         </ion-toolbar>
       </ion-footer>
-
-
     </ion-slide>
 
     <ion-slide class="slide-contact">
       <ion-header no-border>
         <ion-toolbar>
-          <button ion-button round (click)="this.slides.slidePrev()" class="slide-up" style="position:fixed"><ion-icon name="arrow-up"></ion-icon></button>
+          <button ion-button round (click)="this.slides.slidePrev()" class="slide-up" style="position:fixed">
+            <ion-icon name="arrow-up"></ion-icon></button>
         </ion-toolbar>
       </ion-header>
-<page-contact></page-contact>
-
+      <page-contact></page-contact>
     </ion-slide>
-
   </ion-slides>
+
 </ion-content>

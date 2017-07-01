@@ -7,6 +7,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
+import { SkillsPage } from '../pages/skills/skills';
 import { WorkPage } from '../pages/work/work';
 import { BravecamPage } from '../pages/bravecam/bravecam';
 import { ChaldiyePage } from '../pages/chaldiye/chaldiye';
@@ -20,6 +21,7 @@ import { PolizeigewaltPage } from '../pages/polizeigewalt/polizeigewalt';
     BlogPage,
     ContactPage,
     HomePage,
+    SkillsPage,
     TabsPage,
     AboutPage,
     WorkPage,
@@ -55,6 +57,7 @@ import { PolizeigewaltPage } from '../pages/polizeigewalt/polizeigewalt';
     BlogPage,
     ContactPage,
     HomePage,
+    SkillsPage,
     TabsPage,
     AboutPage,
     WorkPage,

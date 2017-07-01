@@ -39,6 +39,11 @@ this.secondaryBright = false;
       },
        {
           img:"assets/img/brittik_basu.jpg",
+          headline:"My Skills",
+          paragraph: "Exciting projects I've worked on"
+        }, 
+       {
+          img:"assets/img/brittik_basu.jpg",
           headline:"My Work",
           paragraph: "Exciting projects I've worked on"
         }, 
@@ -71,7 +76,7 @@ let alert = this.alertCtrl.create({
   }
 
  slideChanged() {
-   if(this.slides.getActiveIndex() >2){
+   if(this.slides.getActiveIndex() >3){
      console.log("Treason");
    }
    else{
@@ -99,11 +104,21 @@ this.slideNo = this.slides.getActiveIndex();
 
   }
   else if(this.slideNo == 2) {
-        this.contact=true;
+        this.contact=false;
              this.work=false;
         this.about=false;
         console.log("on contact slide");
             this.slides.slideTo(2, 500);
+        window.setTimeout(()=> this.secondaryBright = true, 350);
+
+  }
+
+  else if(this.slideNo == 3) {
+        this.contact=true;
+             this.work=false;
+        this.about=false;
+        console.log("on contact slide");
+            this.slides.slideTo(3, 500);
         window.setTimeout(()=> this.secondaryBright = true, 350);
 
   }

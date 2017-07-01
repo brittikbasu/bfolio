@@ -1,7 +1,4 @@
 page-home {
-
-
-
   @mixin slide-up-button {
     .slide-up {
       width: 1%;
@@ -12,58 +9,69 @@ page-home {
       @content;
     }
   }
-  
-    .secondary-bright{
-      
+  .secondary-bright {
     color: color($colors, secondary-bright);
   }
-
-   .button-ios {
+  .button-ios {
     @include mq(iphone5) {
       height: 2.5em;
     }
   }
-  
   .swiper-container-vertical>.swiper-pagination-bullets {
     right: 3vw;
     top: 50%;
     -webkit-transform: translate3d(0px, -50%, 0);
     transform: translate3d(0px, -50%, 0);
   }
-
   .toolbar-background {
     background: transparent;
-  }
-  
-
-  // =============================================== slides //
-  
-    ion-slides {
+  } // =============================================== slides //
+  .scroll-content {
     @include mq(laptop) {
-      margin-top: -$header-height;
+      overflow: hidden;
+    }
+  }
+  ion-slides {
+    @include mq(laptop) {
+      margin-top: -$header-height*0.53;
       height: ($header-height*5.7);
     }
-    
-    .slide-footer{
-      margin-bottom: $header-height*0.8;
-      @include mq(laptop){
-              margin-bottom: $header-height*0.35;
-
-      }
+  }
+  .slide-footer {
+    margin-bottom: $header-height*0.8;
+    @include mq(laptop) {
+      margin-bottom: $header-height*0.35;
     }
-    
   }
   .slide-about {
-    background: color($colors, 'primary');
-   margin-top: -$header-height*1.2;
+    //background: color($colors, 'primary');
+    margin-top: -$header-height*1.2;
+    background-color: color($colors, primary);
+    p {
+      color: color($colors, secondary-text);
+    }
     @include mq(laptop) {
-      background: color($colors, 'dark');
-         margin-top: 0;
-
+      //background: color($colors, 'dark');
+      margin-top: 0;
     }
   }
-
+  .slide-skills {
+    @include mq(mobile) {
+      @include next-slide-button($border-color: primary-dark, $text-color:secondary-text, $bg-color:primary);
+    }
+    @include button-blur-bg(rgba(color($colors, tertiary), 0.55)); //background: color($colors, 'primary');
+    //margin-top: -$header-height*1.2;
+    background-color: #C9100A;
+    @include mq(laptop) {
+      //background: color($colors, 'dark');
+      margin-top: 0;
+    }
+  }
   .slide-work {
+    @include mq(mobile) {
+      @include next-slide-button(primary-dark, secondary-text, secondary);
+    }
+    @include button-blur-bg(rgba(color($colors, primary-dark), 0.55));
     background: color($colors, 'primary-dark');
     @include slide-up-button {
       // background-color: rgba(color($colors, primary), 0.25);
@@ -77,12 +85,9 @@ page-home {
     .button-inner {
       color: color($colors, secondary-text);
     }
-  }
-
-  //---------------------------------------------------------------
-  //split-pane*************************
+  } //---------------------------------------------------------------
   .content-ios,
   .content-md {
     background-color: #000;
-  } //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  }
 }

@@ -49,7 +49,9 @@ $colors: (
     secondary-light: #cf5f86,
     secondary-text:#30d6fa,//#3BC8E7,
     dark:      #000,// #00303d,
-    light:      #cfcfcf //#f4f4f4,
+    light:      #cfcfcf, //#f4f4f4,
+    light-dark: #2e2e2e,
+    tertiary: #c9100a,
 );
 
 $tabs-background:color($colors, dark);

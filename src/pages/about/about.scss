@@ -1,26 +1,34 @@
 page-about {
-  .header-container {
+  /*.header-container {
     height: 20.2%;
     width: 100%;
     background: color($colors, 'dark');
     z-index: 10;
     padding-top: 0.5%;
-    box-shadow: 0 4px 12px -4px color($colors, 'secondary'); //margin-top: 0px;
+    box-shadow: 0 4px 12px -4px color($colors, 'secondary');
     @media(min-width:600px){
           height: $header-height;
     }
   }
-  .top-container {
-    //height: 63.5%;
-    //width: 100%;
-    text-align: center;
-    @media (min-width: 992px) {
-          padding: 1.3% 1.8%;
-    margin-top: 14.5%;
+  */
+@include slide-container($scroll: no);
 
-    height: 95%;
-    max-width: 935px;
-    margin: 0 auto;    }
-  }
-  
+h2 {
+  font-size: 1.7em;
+  color: color($colors, primary-text-2);
+  font-family: $text;
+}
+
+h3 {
+  color: color($colors, primary-2);
+  font-family: $text;
+}
+
+hr.me {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(224, 224, 224, 0.75), rgba(124, 23, 3, 0));
+}
+
+
 }
