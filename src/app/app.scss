@@ -114,30 +114,22 @@
   margin-right: 10px;
   margin-left: 1px;
 } //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
 .tabbar {
   box-shadow: 0 4px 12px -4px color($colors, 'secondary'); //margin-top: 0px; 
-  @include mq(laptop){
-max-width: 35vw;
-    margin-left: 65vw;
-            //height: 14vh;
-               margin-top: -11.6vh;
-   box-shadow: none;
-
-
-
+  @include mq(laptop) {
+    max-width: 35vw;
+    margin-left: 65vw; //height: 14vh;
+    margin-top: -11.6vh;
+    box-shadow: none;
   }
-   
   @include mq(tablet) {
     //height: 14vh;
     //margin-right: 10px; //margin-left: 50vw;
-   box-shadow: none;
-   // margin-top: -14vh;
-   // max-width: 35vw;
-   // margin-left: 65vw;
-   // margin-top: -14.55vh;
-        height: 13.087vh;
+    box-shadow: none; // margin-top: -14vh;
+    // max-width: 35vw;
+    // margin-left: 65vw;
+    // margin-top: -14.55vh;
+    height: 13.087vh;
     /* margin-right: 10vh; */
     /* box-shadow: none; */
     /* margin-top: -14vh; */
@@ -189,9 +181,7 @@ p {
   font-size: 1.13em;
   line-height: normal;
   text-overflow: inherit;
-  color: color($colors, 'secondary-text');
-  //color: #00303d;
-
+  color: color($colors, 'secondary-text'); //color: #00303d;
   text-align: center;
   letter-spacing: 1.7px;
   font-family: $text;
@@ -214,10 +204,8 @@ p {
 //sub page+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .sub-page {
   .scroll-content {
-  overflow-y:scroll; //hides the scrollbar
-  
-}
-  //global*******************************************************
+    overflow-y: scroll; //hides the scrollbar
+  } //global*******************************************************
   .header .toolbar:last-child .toolbar-background {
     background: color($colors, dark);
   }
@@ -233,8 +221,7 @@ p {
   } //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   .scroll-content {
     background: color($colors, light-dark);
-    overflow:scroll;
- 
+    overflow: scroll;
   }
   p {
     font-size: 1.3em;
@@ -278,13 +265,9 @@ p {
   //media queries************************************************
   @include mq(iphone5) {
     /*iphone 5*/
-
   }
   @include mq(iphone6) {
     /*iphone 6*/
-
   } //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   //--------------------------------------------------------------------------
-
- 
 }

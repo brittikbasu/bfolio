@@ -13,6 +13,8 @@ import { BravecamPage } from '../pages/bravecam/bravecam';
 import { ChaldiyePage } from '../pages/chaldiye/chaldiye';
 import { PolysparesPage } from '../pages/polyspares/polyspares';
 import { PolizeigewaltPage } from '../pages/polizeigewalt/polizeigewalt';
+import { GetintouchPage } from '../pages/getintouch/getintouch';
+
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { PolizeigewaltPage } from '../pages/polizeigewalt/polizeigewalt';
     BravecamPage,
     ChaldiyePage,
     PolysparesPage,
-    PolizeigewaltPage
+    PolizeigewaltPage,
+    GetintouchPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -64,7 +67,8 @@ import { PolizeigewaltPage } from '../pages/polizeigewalt/polizeigewalt';
     BravecamPage,
     ChaldiyePage,
     PolysparesPage,
-    PolizeigewaltPage
+    PolizeigewaltPage,
+    GetintouchPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

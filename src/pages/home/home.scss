@@ -74,6 +74,14 @@ page-home {
     background: color($colors, 'primary-dark');
   }
   .slide-contact {
+    .social-buttons{
+ .button-ios {
+    @include mq(iphone5) {
+      height: 3.9em;
+    }
+  }
+    }
+   
      p {
       color: color($colors, primary-dark);
     }

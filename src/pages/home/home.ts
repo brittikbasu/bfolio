@@ -6,6 +6,7 @@ import { AboutPage } from '../about/about';
 
 import { WorkPage } from '../work/work';
 
+import { GetintouchPage } from '../getintouch/getintouch';
 
 
 @Component({
@@ -21,12 +22,16 @@ export class HomePage {
 
     aboutPage = AboutPage;
     workPage = WorkPage;
+    getintouchPage = GetintouchPage;
+
+
     about : boolean;
     work : boolean;
     contact : boolean;
     slidesData: any;
     slideNo : number;
     secondaryBright:boolean;
+    
    // myAlert: boolean;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
     this.slideNo = 0;

@@ -1,0 +1,35 @@
+page-getintouch {
+.contact-container {
+    height: 100%;
+    width: 100%;
+    margin-top: 11.5vh;
+    max-width: 935px;
+    margin:0 auto;
+  }
+  .social-btn {
+    height: 21vw;
+    width: 21vw;
+    border-radius: 50%;
+    @include mq(laptop){
+      height:7vh;
+      width:7vh;
+    }
+  }
+
+  .social-breaker {
+    display:block;
+    @include mq(laptop){
+          display:inline;
+    }
+  }
+  p {
+    color: color($colors, primary-dark);
+  }
+  .contact-header {}
+  h1 {
+    color: #49E80D;
+  }
+  email-text {
+    color: green;
+  }
+}

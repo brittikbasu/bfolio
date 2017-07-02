@@ -1,37 +1,5 @@
 page-contact {
-  .contact-container {
-    height: 100%;
-    width: 100%;
-    margin-top: 11.5vh;
-    max-width: 935px;
-    margin:0 auto;
-  }
-  .social-btn {
-    height: 21vw;
-    width: 21vw;
-    border-radius: 50%;
-    @include mq(laptop){
-      height:7vh;
-      width:7vh;
-    }
-  }
-
-  .social-breaker {
-    display:block;
-    @include mq(laptop){
-          display:inline;
-    }
-  }
-  p {
-    color: color($colors, primary-dark);
-  }
-  .contact-header {}
-  h1 {
-    color: #49E80D;
-  }
-  email-text {
-    color: green;
-  }
+  
   /*.button-ios,
   .button-md {
     min-width: 25vw;
@@ -39,11 +7,12 @@ page-contact {
     letter-spacing: 2px;
   }
   */
-  @media (min-width:992px) {
+  /*@media (min-width:992px) {
     .header-container {
       display: none;
     }
   }
+  */
   html {
     margin: 0;
     height: 100%;
