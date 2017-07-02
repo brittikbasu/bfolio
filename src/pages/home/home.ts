@@ -65,6 +65,8 @@ onScroll(){
   //alert("scrolled");
 }
   ionViewDidLoad() {
+            this.slides.lockSwipes(true);
+
 /*
 let alert = this.alertCtrl.create({
       title: 'Hi There Awesome Person!',
@@ -76,9 +78,15 @@ let alert = this.alertCtrl.create({
     
   }
 
+
+
  goToSlide() {
     this.slides.slideTo(2, 500);
   }
+
+
+
+
 
  slideChanged() {
    if(this.slides.getActiveIndex() >3){
@@ -132,6 +140,21 @@ this.slideNo = this.slides.getActiveIndex();
    }
     
   }
+
+slide(where){
+     console.log("unlocked swipe, next slide is here");
+
+     this.slides.lockSwipes(false);
+  if (where == "next"){
+   this.slides.slideNext();
+   console.log("unlocked swipe, next slide is here");
+  }
+
+  else if( where == "prev"){
+    this.slides.slidePrev()
+  }
+    this.slides.lockSwipes(true);
+}
 
 
 

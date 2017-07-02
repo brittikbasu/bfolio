@@ -14,7 +14,7 @@
       <page-about></page-about>
       <ion-footer no-border class="slide-footer">
         <ion-toolbar>
-          <button ion-button icon-right color="secondary-text" outline round (click)="this.slides.slideNext(); this.slideChanged()" when="sm">
+          <button ion-button icon-right color="secondary-text" outline round (click)='this.slide("next")' when="sm">
   My Skills
   <ion-icon name="arrow-down"></ion-icon>
 </button>
@@ -27,7 +27,7 @@
     <ion-slide class="slide-skills">
        <ion-header no-border>
         <ion-toolbar>
-          <button ion-button round (click)="this.slides.slidePrev()" outline color="primary-dark" class="slide-up" style="position:fixed; border-color: rgba(13, 58, 71, 0.22);">
+          <button ion-button round (click)='this.slide("prev")' outline color="primary-dark" class="slide-up" style="position:fixed; border-color: rgba(13, 58, 71, 0.22);">
             <ion-icon name="arrow-up"></ion-icon></button>
         </ion-toolbar>
       </ion-header>
@@ -35,7 +35,7 @@
       <ion-footer no-border class="slide-footer">
         <div class="blur-bg"></div>
         <ion-toolbar>
-          <button ion-button icon-right color="secondary-text"  outline class="next-slide-button" round (click)="this.slides.slideNext(); this.slideChanged()" when="sm">
+          <button ion-button icon-right color="secondary-text"  outline class="next-slide-button" round (click)='this.slide("next")' when="sm">
   My Work
   <ion-icon name="arrow-down"></ion-icon>
 </button>
@@ -47,7 +47,7 @@
     <ion-slide class="slide-work">
        <ion-header no-border>
         <ion-toolbar>
-          <button ion-button round (click)="this.slides.slidePrev()" outline color="primary" class="slide-up" style="position:fixed; border-color:rgba(19, 79, 127, 0.55);">
+          <button ion-button round (click)='this.slide("prev")' outline color="primary" class="slide-up" style="position:fixed; border-color:rgba(19, 79, 127, 0.55);">
             <ion-icon name="arrow-up"></ion-icon></button>
         </ion-toolbar>
       </ion-header>
@@ -55,7 +55,7 @@
       <ion-footer no-border class="slide-footer">
                 <div class="blur-bg"></div>
         <ion-toolbar>
-          <button ion-button color="primary" icon-right outline class="next-slide-button" round (click)="this.slides.slideNext()" when="sm">
+          <button ion-button color="primary" icon-right outline class="next-slide-button" round (click)='this.slide("next")' when="sm">
   Get in touch
   <ion-icon name="arrow-down"></ion-icon>
 </button>
@@ -66,7 +66,7 @@
     <ion-slide class="slide-contact">
       <ion-header no-border>
         <ion-toolbar>
-          <button ion-button round (click)="this.slides.slidePrev()" outline color="primary" class="slide-up" style="position:fixed; border-color: rgba(13, 58, 71, 0.22);">
+          <button ion-button round (click)='this.slide("prev")' outline color="primary" class="slide-up" style="position:fixed; border-color: rgba(13, 58, 71, 0.22);">
             <ion-icon name="arrow-up"></ion-icon></button>
         </ion-toolbar>
       </ion-header>
