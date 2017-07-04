@@ -1,6 +1,23 @@
 page-blog {
-.tabs-area{
-}//
+
+
+@include slide-container($scroll: yes);
+  
+  .my-slide-container {
+    height: 100vh;
+
+  }
+  h2 {
+    font-size: 1.7em;
+    color: color($colors, primary-text-2);
+    font-family: $text;
+  }
+  h3 {
+    color: color($colors, primary-2);
+    font-family: $text;
+  }
+
+
  /*.top-container{
    /*background-color:#134F7F;
     height: 106%;
@@ -9,7 +26,7 @@ page-blog {
     text-align: center;
   }
   */
-
+/*
     @include slide-container($scroll:no){
       //height: 106%;
     //margin-top: -6%;
@@ -21,14 +38,13 @@ page-blog {
          @include mq(laptop){
            margin-top:0vh;
          }
-
-
-    };
+    }
+    */
 .scroll-content{
   //margin-top:-100px;
        // background-color:#134F7F;
         background-color:#134F7F;
-overflow: hidden;
+//overflow: hidden;
 }
 
 h1{

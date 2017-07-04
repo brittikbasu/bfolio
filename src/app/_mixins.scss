@@ -71,10 +71,11 @@ border-color: color($colors, $border-color);
 .slide-container{
    height: 80vh;
   // width:100vw;
-    margin-top: 20vh;
+   margin-top: 11vh;
     background-color: transparent;
     text-align: center;
     padding-bottom: 22vh;
+    padding-top:6vh;
     overflow: $scroll;
     @include mq(laptop) {
       height: 55vh;
@@ -105,6 +106,25 @@ border-color: color($colors, $border-color);
     }
   }
 
+@mixin show-only-on($device){
+  @if($device == "mobile"){
+@include mq(mobile){
+  display:inherit;
+}  
+@include mq(laptop){
+  display:none;
+}  
+}
+
+@else if($device == "laptop"){
+@include mq(mobile){
+  display:none;
+}  
+@include mq(laptop){
+  display:inherit;
+}  
+}
+}
 
 /*
   @if ($dev-width=="xs") {

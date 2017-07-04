@@ -11,24 +11,22 @@ page-about {
     }
   }
   */
-@include slide-container($scroll: no);
+  @include slide-container($scroll: yes);
+  
+  .my-slide-container {
+    height: 100vh;
 
-h2 {
-  font-size: 1.7em;
-  color: color($colors, primary-text-2);
-  font-family: $text;
-}
+  }
+  h2 {
+    font-size: 1.7em;
+    color: color($colors, primary-text-2);
+    font-family: $text;
+  }
+  h3 {
+    color: color($colors, primary-2);
+    font-family: $text;
+  }
 
-h3 {
-  color: color($colors, primary-2);
-  font-family: $text;
-}
-
-hr.me {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(224, 224, 224, 0.75), rgba(124, 23, 3, 0));
-}
 
 
 }

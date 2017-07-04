@@ -35,20 +35,20 @@ page-home {
     }
   }
   .slide-about {
-     @include slide-up-button;
+    // @include slide-up-button;
     //background: color($colors, 'primary');
-    margin-top: -$header-height*1.2;
+    //margin-top: -$header-height*1.2;
     background-color: color($colors, primary);
     p {
       color: color($colors, secondary-text);
     }
     @include mq(laptop) {
       //background: color($colors, 'dark');
-      margin-top: 0;
+      //margin-top: 0;
     }
   }
   .slide-skills {
-     @include slide-up-button;
+    // @include slide-up-button;
     p {
       color: color($colors, primary-dark);
     }
@@ -56,11 +56,11 @@ page-home {
       @include next-slide-button($border-color: primary-dark, $text-color:secondary-text, $bg-color:primary);
     }
     @include button-blur-bg(rgba(color($colors, tertiary), 0.55)); //background: color($colors, 'primary');
-    //margin-top: -$header-height*1.2;
+    //margin-x: -$header-height*1.2;
     background-color: #C9100A;
     @include mq(laptop) {
       //background: color($colors, 'dark');
-      margin-top: 0;
+     // margin-top: 0;
     }
   }
   .slide-work {
@@ -93,8 +93,57 @@ page-home {
       color: color($colors, secondary-text);
     }
   } //---------------------------------------------------------------
-  .content-ios,
-  .content-md {
-    background-color: #000;
+ 
+
+ .swiper-pagination-progress .swiper-pagination-progressbar{
+   background-color:  color($colors, secondary-bright);
+ }
+ .swiper-button-prev{
+   display:none;
+@include mq(laptop){
+  display: inherit;
+}
+ }
+
+ .swiper-button-next{
+      display:none;
+
+@include mq(laptop){
+  display: inherit;
+}
+ }
+
+ .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after{
+  visibility:visible;
+}
+
+.tabbar {
+  @include mq(laptop) {
+   margin-top:3.8vh;
   }
+}
+
+.next-slide-button{
+  position: absolute;
+  top:5%;
+  right:-2vw;
+  color: color($colors, secondary-text);
+  //padding-left:2vw;
+  width:18vw;
+  text-align: left;
+  padding-right:6vw;
+  font-family: $text;
+}
+
+.prev-slide-button{
+  position: absolute;
+  top:5%;
+  left:-2vw;
+  color: color($colors, secondary-text);
+    width:8vw;
+      padding-left:3vw;
+
+
+}
+
 }

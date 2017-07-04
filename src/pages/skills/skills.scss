@@ -11,7 +11,12 @@ page-skills {
     }
   }
   */
-  @include slide-container($scroll: yes);
+  @include slide-container($scroll: yes){
+   @include mq(laptop){
+      height: 70vh;
+      margin-top: -15vh;
+   } 
+  };
 
   h2 {
     font-size: 1.7em;

@@ -8,31 +8,31 @@
   </ion-item>
 </ion-header>
 <ion-content class="tabs-area" fullscreen="true">
-  <ion-slides pager direction="vertical" (ionSlideDidChange)="slideChanged()">
+
+
+  <ion-slides pager direction="horizontal" (ionSlideDidChange)="slideChanged()" paginationType="progress" effect="coverflow" speed="1000">
 
     <ion-slide class="slide-about">
       <page-about></page-about>
-      <ion-footer no-border class="slide-footer">
-        <ion-toolbar>
-          <button ion-button icon-right color="secondary-text" outline round (click)='this.slide("next")' when="sm">
+   
+          <button class="next-slide-button show-only-on-laptop" round ion-button large icon-right color="secondary" (click)='this.slide("next")' when="sm">
   My Skills
-  <ion-icon name="arrow-down"></ion-icon>
+  <ion-icon name="arrow-forward"></ion-icon>
 </button>
-
-        </ion-toolbar>
-      </ion-footer>
 
     </ion-slide>
 
+
     <ion-slide class="slide-skills">
-       <ion-header no-border>
+      <!-- <ion-header no-border>
         <ion-toolbar>
           <button ion-button round (click)='this.slide("prev")' outline color="primary-dark" class="slide-up" style="position:fixed; border-color: rgba(13, 58, 71, 0.22);">
             <ion-icon name="arrow-up"></ion-icon></button>
         </ion-toolbar>
       </ion-header>
-      <page-skills></page-skills>
-      <ion-footer no-border class="slide-footer">
+      -->
+     <page-skills></page-skills>
+     <!-- <ion-footer no-border class="slide-footer">
         <div class="blur-bg"></div>
         <ion-toolbar>
           <button ion-button icon-right color="secondary-text"  outline class="next-slide-button" round (click)='this.slide("next")' when="sm">
@@ -41,18 +41,31 @@
 </button>
         </ion-toolbar>
       </ion-footer>
+-->
+<button class="prev-slide-button show-only-on-laptop" round ion-button large icon-left color="secondary" (click)='this.slide("next")' when="sm">
+  <ion-icon name="arrow-back"></ion-icon>
+
+</button>
+      <button class="next-slide-button show-only-on-laptop" round ion-button large icon-right color="secondary" (click)='this.slide("next")' when="sm">
+  My Work
+  <ion-icon name="arrow-forward"></ion-icon>
+</button>
 
     </ion-slide>
 
+
+
     <ion-slide class="slide-work">
-       <ion-header no-border>
+      <!-- <ion-header no-border>
         <ion-toolbar>
           <button ion-button round (click)='this.slide("prev")' outline color="primary" class="slide-up" style="position:fixed; border-color:rgba(19, 79, 127, 0.55);">
             <ion-icon name="arrow-up"></ion-icon></button>
         </ion-toolbar>
       </ion-header>
+      -->
       <page-work></page-work>
-      <ion-footer no-border class="slide-footer">
+      
+     <!-- <ion-footer no-border class="slide-footer">
                 <div class="blur-bg"></div>
         <ion-toolbar>
           <button ion-button color="primary" icon-right outline class="next-slide-button" round (click)='this.slide("next")' when="sm">
@@ -61,17 +74,36 @@
 </button>
         </ion-toolbar>
       </ion-footer>
+      -->
+    -<button class="prev-slide-button show-only-on-laptop" round ion-button large icon-left color="secondary" (click)='this.slide("next")' when="sm">
+  <ion-icon name="arrow-back"></ion-icon>
+
+</button>
+            <button class="next-slide-button show-only-on-laptop"  ion-button round large icon-right color="secondary" (click)='this.slide("next")' when="sm">
+  Get in Touch
+  <ion-icon name="arrow-forward"></ion-icon>
+</button>
     </ion-slide>
 
+
+
     <ion-slide class="slide-contact">
-      <ion-header no-border>
+     <!-- <ion-header no-border>
         <ion-toolbar>
           <button ion-button round (click)='this.slide("prev")' outline color="primary" class="slide-up" style="position:fixed; border-color: rgba(13, 58, 71, 0.22);">
             <ion-icon name="arrow-up"></ion-icon></button>
         </ion-toolbar>
       </ion-header>
+      -->  <button class="prev-slide-button show-only-on-laptop" round ion-button large icon-left color="secondary" (click)='this.slide("next")' when="sm">
+  <ion-icon name="arrow-back"></ion-icon>
+
+</button>
 <page-getintouch></page-getintouch>
     </ion-slide>
+ <button class="prev-slide-button show-only-on-laptop" ion-button round  large icon-right color="primary" (click)='this.slide("prev")' when="sm">
+  <ion-icon name="arrow-forward"></ion-icon>
+</button>
+
   </ion-slides>
 
 </ion-content>

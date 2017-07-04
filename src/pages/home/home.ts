@@ -65,7 +65,7 @@ onScroll(){
   //alert("scrolled");
 }
   ionViewDidLoad() {
-            this.slides.lockSwipes(true);
+           // this.slides.lockSwipes(true);
 
 /*
 let alert = this.alertCtrl.create({
@@ -144,7 +144,7 @@ this.slideNo = this.slides.getActiveIndex();
 slide(where){
      console.log("unlocked swipe, next slide is here");
 
-     this.slides.lockSwipes(false);
+     //this.slides.lockSwipes(false);
   if (where == "next"){
    this.slides.slideNext();
    console.log("unlocked swipe, next slide is here");
@@ -153,7 +153,7 @@ slide(where){
   else if( where == "prev"){
     this.slides.slidePrev()
   }
-    this.slides.lockSwipes(true);
+   // this.slides.lockSwipes(true);
 }
 
 

@@ -14,6 +14,10 @@
 // automatically applied to the <body> element in the app.
 //ionic global-styles++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 @import "_mixins";
+
+ .content {
+   background-color: #000;
+  } 
 .header-container {
   height: 20.2%;
   width: 100%;
@@ -119,8 +123,9 @@
   @include mq(laptop) {
     max-width: 35vw;
     margin-left: 65vw; //height: 14vh;
-    margin-top: -11.6vh;
+   margin-top: -11.6vh;
     box-shadow: none;
+  //margin-top:3.8vh;
   }
   @include mq(tablet) {
     //height: 14vh;
@@ -270,4 +275,13 @@ p {
     /*iphone 6*/
   } //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   //--------------------------------------------------------------------------
+
+  .show-only-on-mobile{
+  @include show-only-on(mobile);
+}
+.show-only-on-laptop{
+  @include show-only-on(laptop);
+}
+
+
 }
