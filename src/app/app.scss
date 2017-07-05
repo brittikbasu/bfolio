@@ -13,6 +13,16 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 //ionic global-styles++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/* exo-2-300italic - latin */
+@font-face {
+  font-family: 'Exo 2';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Exo 2 Light Italic'), local('Exo2-LightItalic'),
+       url('../assets/fonts/Exo_2/Exo2-LightItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+
 @import "_mixins";
 
  .content {
@@ -121,11 +131,10 @@
 .tabbar {
   box-shadow: 0 4px 12px -4px color($colors, 'secondary'); //margin-top: 0px; 
   @include mq(laptop) {
-    max-width: 35vw;
-    margin-left: 65vw; //height: 14vh;
-   margin-top: -11.6vh;
+     max-width: 25vw;
+    margin-left: 8.8vw;
+    margin-top: 3.75vh;
     box-shadow: none;
-  //margin-top:3.8vh;
   }
   @include mq(tablet) {
     //height: 14vh;

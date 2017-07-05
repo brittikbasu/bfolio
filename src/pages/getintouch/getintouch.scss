@@ -1,10 +1,13 @@
 page-getintouch {
-.contact-container {
-    height: 100%;
-    width: 100%;
-    margin-top: 11.5vh;
-    max-width: 935px;
-    margin:0 auto;
+
+  @include slide-container($scroll:no){
+    @include mq(mobile){
+      height:60vh;
+      margin-top:11vh;
+    }
+    @include mq(laptop){
+      height:280px;;
+    }
   }
   .social-btn {
     height: 21vw;
@@ -31,5 +34,13 @@ page-getintouch {
   }
   email-text {
     color: green;
+  }
+
+  .button-round-ios{
+    @include mq(iphone5){
+    padding-left: 0.9em;
+    padding-right: 0.9em; 
+    }
+
   }
 }

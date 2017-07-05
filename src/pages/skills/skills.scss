@@ -1,20 +1,9 @@
 page-skills {
-  /*.header-container {
-    height: 20.2%;
-    width: 100%;
-    //background: color($colors, 'dark');
-    z-index: 10;
-    padding-top: 0.5%;
-    box-shadow: 0 4px 12px -4px color($colors, 'secondary');
-    @media(min-width:600px){
-          height: $header-height;
-    }
-  }
-  */
   @include slide-container($scroll: yes){
    @include mq(laptop){
-      height: 70vh;
-      margin-top: -15vh;
+     // height: 70vh;
+      margin-top: 10vh;
+      height:525px;
    } 
   };
 

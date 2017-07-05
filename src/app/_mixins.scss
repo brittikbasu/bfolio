@@ -9,24 +9,18 @@
       @content;
     }
   }
-
-@else if ($dev-width=="mobile") {
+ 
+  @else if ($dev-width=="tablet") {
+    @media (min-width: 720px) and (max-width:900px) {
+      @content;
+    }
+  }
+ @else if ($dev-width=="mobile") {
     @media (max-width: 700px) {
       @content;
     }
   }
   
-  @else if ($dev-width=="tablet") {
-    @media (min-width: 720px) and (max-width:900px){
-      @content;
-    }
-  }
-  /*@else if ($dev-width=="mobile") {
-     @media (max-width:700px) {
-      @content
-     }
-  }
-  */
   @else if ($dev-width=="laptop") {
     @media (min-width: 960px) {
       @content;
@@ -34,16 +28,14 @@
   }
 }
 
-
-
 @mixin button-blur-bg($background) {
-       .blur-bg{
-  filter: blur(5px);
-  height: 13vh;
-  width: 100%;
-  position: absolute; //background: rgba(201, 16, 10, 0.55);
-  background: $background;
-       }
+  .blur-bg {
+    filter: blur(5px);
+    height: 13vh;
+    width: 100%;
+    position: absolute; //background: rgba(201, 16, 10, 0.55);
+    background: $background;
+  }
 }
 
 @mixin next-slide-button($border-color, $text-color, $bg-color) {
@@ -51,80 +43,76 @@
     color: #30d6fa;
     background-color: rgba(178, 0, 70, 0.75);
     */
-    .next-slide-button{
-border-color: color($colors, $border-color);
-  color: color($colors, $text-color);
-  background-color: rgba(color($colors, $bg-color), 0.75);
-    }
-  
+  .next-slide-button {
+    border-color: color($colors, $border-color);
+    color: color($colors, $text-color);
+    background-color: rgba(color($colors, $bg-color), 0.75);
+  }
 }
 
-
-@mixin slide-container($scroll: yes){
-
-@if ($scroll == no){
-  $scroll : hidden;
-}
-@else if ($scroll == yes){
-  $scroll : scroll;
-}
-.slide-container{
-   height: 80vh;
-  // width:100vw;
-   margin-top: 11vh;
+@mixin slide-container($scroll: yes) {
+  @if ($scroll==no) {
+    $scroll: hidden;
+  }
+  @else if ($scroll==yes) {
+    $scroll: scroll;
+  }
+  .slide-container {
+    height: 80vh; // width:100vw;
+    margin-top: 11vh;
     background-color: transparent;
-    text-align: center;
-    padding-bottom: 22vh;
-    padding-top:6vh;
+    text-align: center; //padding-bottom: 22vh;
+    //padding-top:6vh;
     overflow: $scroll;
+    margin-top: $header-height*1.55;
     @include mq(laptop) {
       height: 55vh;
       overflow-y: hidden;
       overflow-x: hidden;
       max-width: 935px;
       margin: 0 auto;
-      margin-top: -$header-height;
+     // margin-top: -$header-height;
     }
-    @include mq(tablet){
+    @include mq(tablet) {
       margin-top: 4.5vh;
-
+    }
+    @content;
   }
-  @content;
-}
 }
 
+@mixin slide-up-button {
+  .slide-up {
+    width: 1%;
+    font-size: 2.5vh;
+    z-index: 100;
+    margin-top: -2.5%;
+    margin-left: -2vw;
+    @content;
+  }
+}
 
- @mixin slide-up-button {
-    .slide-up {
-      width: 1%;
-      font-size: 2.5vh;
-      z-index: 100;
-      margin-top:-2.5%;
-          margin-left: -2vw;
-
-      @content;
+@mixin show-only-on($device) {
+  @if($device=="mobile") {
+    @include mq(mobile) {
+      display: inherit;
+    }
+    @include mq(laptop) {
+      display: none;
     }
   }
-
-@mixin show-only-on($device){
-  @if($device == "mobile"){
-@include mq(mobile){
-  display:inherit;
-}  
-@include mq(laptop){
-  display:none;
-}  
+  @else if($device=="laptop") {
+    @include mq(mobile) {
+      display: none;
+    }
+    @include mq(laptop) {
+      display: inherit;
+    }
+  }
+  else {
+    background-color: red;
+  }
 }
 
-@else if($device == "laptop"){
-@include mq(mobile){
-  display:none;
-}  
-@include mq(laptop){
-  display:inherit;
-}  
-}
-}
 
 /*
   @if ($dev-width=="xs") {

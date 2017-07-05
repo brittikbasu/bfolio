@@ -6,19 +6,32 @@
     <h2 [class.secondary-bright]="secondaryBright">{{slidesData[slideNo].headline}}</h2>
     <p>{{slidesData[slideNo].paragraph}}</p>
   </ion-item>
+<ion-item class="deutsch-toggle">
+  <ion-toggle checked="false"></ion-toggle>
+    <ion-label>Deutsch</ion-label>
+
+</ion-item>
+  <div class="header-buttons">
+  <button class="header-back-button " round ion-button large icon-left color="secondary" (click)='this.slide("prev")' *ngIf="slideNo > 0">
+  <ion-icon name="arrow-back"></ion-icon>
+</button>
+      <button class="header-forward-button show-only-on-laptop" round ion-button large icon-right color="secondary" (click)='this.slide("next")' *ngIf="this.slideNo != 3">
+  {{slidesData[nextSlideNo].headline}}
+  <ion-icon name="arrow-forward"></ion-icon>
+</button>
+  </div>
+
 </ion-header>
-<ion-content class="tabs-area" fullscreen="true">
+<!--<ion-content class="tabs-area" fullscreen="true">-->
 
 
-  <ion-slides pager direction="horizontal" (ionSlideDidChange)="slideChanged()" paginationType="progress" effect="coverflow" speed="1000">
+
+  <ion-slides class="tabs-area" pager direction="horizontal" (ionSlideDidChange)="slideChanged()" paginationType="progress" effect="coverflow" speed="1150">
 
     <ion-slide class="slide-about">
       <page-about></page-about>
    
-          <button class="next-slide-button show-only-on-laptop" round ion-button large icon-right color="secondary" (click)='this.slide("next")' when="sm">
-  My Skills
-  <ion-icon name="arrow-forward"></ion-icon>
-</button>
+     
 
     </ion-slide>
 
@@ -42,14 +55,7 @@
         </ion-toolbar>
       </ion-footer>
 -->
-<button class="prev-slide-button show-only-on-laptop" round ion-button large icon-left color="secondary" (click)='this.slide("next")' when="sm">
-  <ion-icon name="arrow-back"></ion-icon>
 
-</button>
-      <button class="next-slide-button show-only-on-laptop" round ion-button large icon-right color="secondary" (click)='this.slide("next")' when="sm">
-  My Work
-  <ion-icon name="arrow-forward"></ion-icon>
-</button>
 
     </ion-slide>
 
@@ -75,14 +81,8 @@
         </ion-toolbar>
       </ion-footer>
       -->
-    -<button class="prev-slide-button show-only-on-laptop" round ion-button large icon-left color="secondary" (click)='this.slide("next")' when="sm">
-  <ion-icon name="arrow-back"></ion-icon>
-
-</button>
-            <button class="next-slide-button show-only-on-laptop"  ion-button round large icon-right color="secondary" (click)='this.slide("next")' when="sm">
-  Get in Touch
-  <ion-icon name="arrow-forward"></ion-icon>
-</button>
+   
+        
     </ion-slide>
 
 
@@ -94,16 +94,11 @@
             <ion-icon name="arrow-up"></ion-icon></button>
         </ion-toolbar>
       </ion-header>
-      -->  <button class="prev-slide-button show-only-on-laptop" round ion-button large icon-left color="secondary" (click)='this.slide("next")' when="sm">
-  <ion-icon name="arrow-back"></ion-icon>
-
-</button>
+      -->  
 <page-getintouch></page-getintouch>
     </ion-slide>
- <button class="prev-slide-button show-only-on-laptop" ion-button round  large icon-right color="primary" (click)='this.slide("prev")' when="sm">
-  <ion-icon name="arrow-forward"></ion-icon>
-</button>
+
 
   </ion-slides>
 
-</ion-content>
+<!--</ion-content>-->

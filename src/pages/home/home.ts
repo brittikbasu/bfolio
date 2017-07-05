@@ -1,12 +1,25 @@
-import { Component, ViewChild} from '@angular/core';
+import {
+  Component,
+  ViewChild
+} from '@angular/core';
 
-import { NavController, AlertController, Slides } from 'ionic-angular';
+import {
+  NavController,
+  AlertController,
+  Slides
+} from 'ionic-angular';
 
-import { AboutPage } from '../about/about';
+import {
+  AboutPage
+} from '../about/about';
 
-import { WorkPage } from '../work/work';
+import {
+  WorkPage
+} from '../work/work';
 
-import { GetintouchPage } from '../getintouch/getintouch';
+import {
+  GetintouchPage
+} from '../getintouch/getintouch';
 
 
 @Component({
@@ -20,143 +33,150 @@ export class HomePage {
   //  @ViewChild(Content) content: Content;
   @ViewChild(Slides) slides: Slides;
 
-    aboutPage = AboutPage;
-    workPage = WorkPage;
-    getintouchPage = GetintouchPage;
+  aboutPage = AboutPage;
+  workPage = WorkPage;
+  getintouchPage = GetintouchPage;
 
 
-    about : boolean;
-    work : boolean;
-    contact : boolean;
-    slidesData: any;
-    slideNo : number;
-    secondaryBright:boolean;
-    
-   // myAlert: boolean;
+  about: boolean;
+  work: boolean;
+  contact: boolean;
+  slidesData: any;
+  slideNo: number;
+  slideTotal: number;
+  nextSlideNo: number;
+  secondaryBright: boolean;
+
+  // myAlert: boolean;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
     this.slideNo = 0;
-      this.about = true;
-this.secondaryBright = false;
-      this.slidesData = [{
-          img:"assets/img/brittik_basu.jpg",
-          headline:"Brittik Basu",
-          paragraph: "UX Designer & Front-end Developer"
+    this.about = true;
+    this.secondaryBright = false;
+    this.nextSlideNo = 1;
+    this.slidesData = [{
+        img: "assets/img/brittik_basu.jpg",
+        headline: "Brittik Basu",
+        paragraph: "UX Designer & Front-end Developer"
       },
-       {
-          img:"assets/img/brittik_basu.jpg",
-          headline:"My Skills",
-          paragraph: "Exciting projects I've worked on"
-        }, 
-       {
-          img:"assets/img/brittik_basu.jpg",
-          headline:"My Work",
-          paragraph: "Exciting projects I've worked on"
-        }, 
-        {
-          img:"assets/img/brittik_basu.jpg",
-          headline:"Get in Touch",
-          paragraph: "hello(at)brittikbasu.com"
-        }];
-       
+      {
+        img: "assets/img/brittik_basu.jpg",
+        headline: "My Skills",
+        paragraph: "Exciting projects I've worked on"
+      },
+      {
+        img: "assets/img/brittik_basu.jpg",
+        headline: "My Work",
+        paragraph: "Exciting projects I've worked on"
+      },
+      {
+        img: "assets/img/brittik_basu.jpg",
+        headline: "Get in Touch",
+        paragraph: "hello(at)brittikbasu.com"
+      },
+      {
+        img: "",
+        headline: "",
+        paragraph: ""
+      }
+    ];
+
 
   }
 
-onScroll(){
-  //alert("scrolled");
-}
   ionViewDidLoad() {
-           // this.slides.lockSwipes(true);
 
-/*
-let alert = this.alertCtrl.create({
-      title: 'Hi There Awesome Person!',
-      subTitle: 'My website is a work in progress and will be ready by the end of this month (March, 2017). Dont let this stop you from checking it out now :)',
-      buttons: ['OK COOL!']
-    });
-    alert.present();
-*/
-    
+    /*
+    let alert = this.alertCtrl.create({
+          title: 'Hi There Awesome Person!',
+          subTitle: 'My website is a work in progress and will be ready by the end of this month (March, 2017). Dont let this stop you from checking it out now :)',
+          buttons: ['OK COOL!']
+        });
+        alert.present();
+    */
+
   }
 
 
 
- goToSlide() {
+  goToSlide() {
     this.slides.slideTo(2, 500);
   }
 
 
 
+  errorFree() {
+    if (this.slides.getActiveIndex() > this.slides.length() - 1) {
+      console.log("Slide Overflow Detected");
+      if (this.nextSlideNo > 4) {
+        this.nextSlideNo--;
+      }
+    } else {
 
+      this.slideNo = this.slides.getActiveIndex();
+      if (this.nextSlideNo > this.slides.length() - 1) {
+        this.nextSlideNo--;
+      } else {
+        this.nextSlideNo = this.slides.getActiveIndex() + 1;
 
- slideChanged() {
-   if(this.slides.getActiveIndex() >3){
-     console.log("Treason");
-   }
-   else{
+      }
+    }
 
-this.slideNo = this.slides.getActiveIndex();
+  }
+
+  slideChanged() {
+
     console.log("Current index is", this.slideNo);
-    if(this.slideNo == 0){
+    this.errorFree();
+    console.log("nextSlideNo is", this.nextSlideNo);
+
+    if (this.slideNo == 0) {
       this.secondaryBright = false;
+      this.about = true;
+      this.contact = false;
+      this.work = false;
+      console.log("on about slide");
+      //this.slides.slideTo(0, 500);
 
-    this.about=true;
-            this.contact=false;
-        this.work=false;
-        console.log("on about slide");
-            this.slides.slideTo(0, 500);
+    } else if (this.slideNo == 1) {
+      this.work = true;
+      this.about = false;
+      this.contact = false;
+      console.log("on skills slide");
+     // this.slides.slideTo(1, 500);
+      window.setTimeout(() => this.secondaryBright = true, 750);
+
+
+    } else if (this.slideNo == 2) {
+      this.contact = false;
+      this.work = false;
+      this.about = false;
+      console.log("on work slide");
+     // this.slides.slideTo(2, 500);
+      window.setTimeout(() => this.secondaryBright = true, 350);
+
+    } else if (this.slideNo == 3) {
+      this.contact = true;
+      this.work = false;
+      this.about = false;
+      console.log("on contact slide");
+      //this.slides.slideTo(3, 500);
+      window.setTimeout(() => this.secondaryBright = true, 350);
+
+    }
+
+
+
 
   }
-  else if(this.slideNo ==1){
-        this.work=true;
-        this.about=false;
-        this.contact=false;
-        console.log("on work slide");
-        this.slides.slideTo(1, 500);
-        window.setTimeout(()=> this.secondaryBright = true, 750);
 
-
+  slide(where) {
+    if (where == "next") {
+      this.slides.slideNext();
+    } else if (where == "prev") {
+      this.slides.slidePrev()
+    }
   }
-  else if(this.slideNo == 2) {
-        this.contact=false;
-             this.work=false;
-        this.about=false;
-        console.log("on contact slide");
-            this.slides.slideTo(2, 500);
-        window.setTimeout(()=> this.secondaryBright = true, 350);
-
-  }
-
-  else if(this.slideNo == 3) {
-        this.contact=true;
-             this.work=false;
-        this.about=false;
-        console.log("on contact slide");
-            this.slides.slideTo(3, 500);
-        window.setTimeout(()=> this.secondaryBright = true, 350);
-
-  }
-
-
-   }
-    
-  }
-
-slide(where){
-     console.log("unlocked swipe, next slide is here");
-
-     //this.slides.lockSwipes(false);
-  if (where == "next"){
-   this.slides.slideNext();
-   console.log("unlocked swipe, next slide is here");
-  }
-
-  else if( where == "prev"){
-    this.slides.slidePrev()
-  }
-   // this.slides.lockSwipes(true);
-}
 
 
 
 }
-

@@ -54,9 +54,10 @@ $colors: (
     tertiary: #c9100a,
 );
 
+$background-color	: color($colors, dark);
 $tabs-background:color($colors, dark);
 $tabs-ios-tab-icon-color-active : color($colors, secondary);
-$tabs-md-tab-icon-color-active : color($colors, primary);
+$tabs-md-tab-icon-color-active : color($colors, secondary);
 $tabs-tab-color-active	:  color($colors, primary);
 $tabs-ios-tab-icon-color	: rgba(60, 60, 60, 0.7); //inactive tabs icon's outline color 
 $tabs-tab-color-inactive	: rgba(60, 60, 60, 0.7); // inactive tab's font color
@@ -66,11 +67,18 @@ $toolbar-background	: color($colors, dark);
 $toolbar-md-title-text-color : color($colors, light);
 $tabs-tab-padding-top	:-100px;
 
+$toggle-ios-handle-background-color	: color($colors, primary);
+$toggle-md-handle-background-color-off		: color($colors, primary-dark);
+$toggle-md-handle-background-color-on	: color($colors, primary);
+$toggle-md-track-background-color-on: color($colors, secondary-light);
+$toggle-md-track-background-color-off: color($colors, primary);
+//$toggle-ios-height	:100px;
+
 
 // Custom Variables
 $header-height: 15.25vh;
   $headline:  'Pacifico', sans-serif;
-  $text:   'Exo 2', sans-serif;
+  $text:   'Exo 2', sans-serif; 
 $decorative-headline: 'Sarina', sans-serif;
 $decorative-text: 'Jura', sans-serif;
 

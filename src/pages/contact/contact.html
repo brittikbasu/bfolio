@@ -7,6 +7,11 @@
     <h2>Contact Me</h2>
     <p>Thoughts on UX design and front end development</p>
   </ion-item>
+   <div class="header-buttons">
+  <button class="header-back-button " round ion-button large icon-left color="secondary" (click)='this.slide("prev")' *ngIf="slideNo > 0">
+  <ion-icon name="arrow-back"></ion-icon>
+</button>
+   </div>
 </ion-header>
 <iframe id="typeform-full" width="100%" height="97%" frameborder="0" style="margin-top:3vh" src="https://brittikbasu.typeform.com/to/zxs04A"></iframe>
 
