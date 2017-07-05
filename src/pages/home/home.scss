@@ -8,12 +8,7 @@ page-home {
       height: 2.5em;
     }
   }
-  .swiper-container-vertical>.swiper-pagination-bullets {
-    right: 3vw;
-    top: 50%;
-    -webkit-transform: translate3d(0px, -50%, 0);
-    transform: translate3d(0px, -50%, 0);
-  }
+
 
   .toolbar-background {
     background: transparent;
@@ -101,7 +96,7 @@ page-home {
  }
 
  .swiper-container-horizontal > .swiper-pagination-progress {
-    top: 20.2vh;
+    top: $header-height*1.235;
     height: 4px;
 
 @include mq(laptop){
