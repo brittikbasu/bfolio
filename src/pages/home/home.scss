@@ -20,9 +20,11 @@ page-home {
   }
   ion-slides {
     @include mq(laptop) {
-      //margin-top: -$header-height*0.53;
-      //height: ($header-height*5.7);
+     // height: 111%;
+     height:84.6vh;
+    margin-top: -4.1%;
     }
+    
   }
   .slide-footer {
     margin-bottom: $header-height*0.8;
@@ -97,10 +99,12 @@ page-home {
 
  .swiper-container-horizontal > .swiper-pagination-progress {
     top: $header-height*1.235;
-    height: 4px;
+   // height: 4px;
+    top:0;
 
 @include mq(laptop){
-      top: 15.2vh;
+     // top: 15.2vh;
+     top:0;
 
 }
  }

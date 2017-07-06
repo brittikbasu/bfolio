@@ -3,7 +3,7 @@ page-getintouch {
   @include slide-container($scroll:no){
     @include mq(mobile){
       height:60vh;
-      margin-top:11vh;
+      margin-top:0;
     }
     @include mq(laptop){
       height:280px;;

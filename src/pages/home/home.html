@@ -1,4 +1,4 @@
-<ion-header class="header-container">
+<ion-header class="header-container" style="position: absolute">
   <ion-item class="me-container">
     <ion-avatar item-left (click)="this.slides.slideTo(0,500)">
       <img src="{{slidesData[slideNo].img}}" />
@@ -22,11 +22,11 @@
   </div>
 
 </ion-header>
-<!--<ion-content class="tabs-area" fullscreen="true">-->
+<ion-content fullscreen="true">
 
 
 
-  <ion-slides class="tabs-area" pager direction="horizontal" (ionSlideDidChange)="slideChanged()" paginationType="progress" effect="coverflow" speed="1150">
+  <ion-slides class="tabs-area" pager direction="horizontal" (ionSlideDidChange)="slideChanged()" paginationType="progress" effect="coverflow" speed="1250">
 
     <ion-slide class="slide-about">
       <page-about></page-about>
@@ -101,4 +101,4 @@
 
   </ion-slides>
 
-<!--</ion-content>-->
+</ion-content>
