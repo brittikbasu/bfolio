@@ -2,7 +2,7 @@ page-skills {
   @include slide-container($scroll: yes){
    @include mq(laptop){
      // height: 70vh;
-      margin-top: 10vh;
+      //margin-top: 10vh;
       height:525px;
    } 
   };
