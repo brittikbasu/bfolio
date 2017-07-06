@@ -100,7 +100,7 @@ page-home {
  .swiper-container-horizontal > .swiper-pagination-progress {
     top: $header-height*1.235;
    // height: 4px;
-    top:0;
+    top:-0.01vh;
 
 @include mq(laptop){
      // top: 15.2vh;
