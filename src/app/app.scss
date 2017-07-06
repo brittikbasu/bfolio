@@ -296,5 +296,8 @@ p {
 .spacer{
   height:6vh;
   width:100%;
+  @include mq(laptop){
+height:0;
+  }
 }
 }
