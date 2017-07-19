@@ -59,8 +59,8 @@ this.slideNo = 0;
         img: "assets/img/brittik_basu.jpg",
         headline: "Brittik Basu",
         headlineDE:  "Brittik Basu",
-        paragraph: "UX Designer & Front-end Developer",
-        paragraphDE: "UX Designer & Front-end Developer"
+        paragraph: "UX Designer & Hybrid App Developer",
+        paragraphDE: "UX Designer & Hybrid App Developer"
 
 
       },
