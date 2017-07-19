@@ -36,8 +36,8 @@ import { GetintouchPage } from '../pages/getintouch/getintouch';
   imports: [
     IonicModule.forRoot(MyApp, {
       tabsHideOnSubPages:'true',
-    tabsPlacement: 'top',
-  platforms: {
+    tabsPlacement: 'bottom',
+  /*platforms: {
     ios: {
       tabsPlacement: 'bottom'
     },
@@ -51,7 +51,7 @@ import { GetintouchPage } from '../pages/getintouch/getintouch';
                   tabsPlacement: 'bottom'
 
     }
-  }}),
+  }*/}),
      BrowserModule
   ],
   bootstrap: [IonicApp],
