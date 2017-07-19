@@ -3,22 +3,30 @@
     <ion-avatar item-left (click)="this.slides.slideTo(0,500)">
       <img src="{{slidesData[slideNo].img}}" />
     </ion-avatar>
-    <h2 [class.secondary-bright]="secondaryBright">{{slidesData[slideNo].headline}}</h2>
-    <p>{{slidesData[slideNo].paragraph}}</p>
-  </ion-item>
-<ion-item class="deutsch-toggle">
-  <ion-toggle checked="false"></ion-toggle>
-    <ion-label>Deutsch</ion-label>
+    <h2 [class.secondary-bright]="secondaryBright" *ngIf="!deutsch">{{slidesData[slideNo].headline}}</h2>
+        <h2 [class.secondary-bright]="secondaryBright" *ngIf="deutsch">{{slidesData[slideNo].headlineDE}}</h2>
 
+    <p *ngIf="!deutsch">{{slidesData[slideNo].paragraph}}</p>
+        <p *ngIf="deutsch">{{slidesData[slideNo].paragraphDE}}</p>
+
+  </ion-item>
+<div class="show-only-on-laptop">
+<ion-item class="deutsch-toggle">
+  <ion-toggle [(ngModel)]="deutsch" (click)="languageChanged()"></ion-toggle>
+    <ion-label>Deutsch</ion-label>
 </ion-item>
+</div>
   <div class="header-buttons">
   <button class="header-back-button " round ion-button large icon-left color="secondary" (click)='this.slide("prev")' *ngIf="slideNo > 0">
   <ion-icon name="arrow-back"></ion-icon>
 </button>
       <button class="header-forward-button show-only-on-laptop" round ion-button large icon-right color="secondary" (click)='this.slide("next")' *ngIf="this.slideNo != 3">
-  {{slidesData[nextSlideNo].headline}}
+  <ng-container *ngIf="!deutsch">{{slidesData[nextSlideNo].headline}}</ng-container>
+    <ng-container *ngIf="deutsch">{{slidesData[nextSlideNo].headlineDE}}</ng-container>
+
   <ion-icon name="arrow-forward"></ion-icon>
 </button>
+
   </div>
 
 </ion-header>
@@ -29,8 +37,36 @@
   <ion-slides class="tabs-area" pager direction="horizontal" (ionSlideDidChange)="slideChanged()" paginationType="progress" effect="coverflow" speed="1250">
 
     <ion-slide class="slide-about">
+      <ion-header no-border>
+        <ion-toolbar>
+           <ion-item class="deutsch-toggle">
+  <ion-toggle [(ngModel)]="deutsch" (tap)="languageChanged()"></ion-toggle>
+    <ion-label>Deutsch</ion-label>
+
+</ion-item>
+        </ion-toolbar>
+      </ion-header>
+
+
       <page-about></page-about>
-   
+
+    <ion-footer no-border class="slide-footer show-only-on-mobile">
+        <!--<div class="blur-bg"></div>-->
+        <ion-toolbar>
+  
+    
+          <button ion-button icon-right color="secondary-text"  clear class="next-slide-button" (click)='this.slide("next")' when="sm" style="float:right;">
+  <ion-icon name="arrow-back"> </ion-icon> 
+  <ion-icon name="arrow-back"> </ion-icon>
+  <ion-icon name="arrow-back"> </ion-icon>   
+  <p> Swipe left</p>
+  <ion-icon name="arrow-back"> </ion-icon>
+  <ion-icon name="arrow-back"> </ion-icon>
+
+</button>
+        </ion-toolbar>
+      </ion-footer>
+
      
 
     </ion-slide>

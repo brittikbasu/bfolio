@@ -5,10 +5,20 @@
   Ionic pages and navigation.
 -->
  <div class="slide-container">
-        <h1>Let's discuss your UX</h1>
+        <ng-container *ngIf = "!deutsch">
+          <h1>Let's discuss your UX</h1>
   <p margin-top>
-    As a UX designer, I work with you to design usable solutions that your users need.
+    As a UX designer, I can work with you to design usable solutions that your users need.
   </p>
+        </ng-container>
+
+         <ng-container *ngIf = "deutsch">
+          <h1>Lassen Sie uns Ihre UX besprechen</h1>
+  <p margin-top>
+    Als UX-Designer kann ich mit Ihnen arbeiten, um nutzbare Lösungen zu entwerfen, die Ihre Benutzer benötigen.
+  </p>
+        </ng-container>
+
 <div class="social-buttons">
       <a target="_blank" href="https://m.me/brittikbasu"><button ion-button outline padding color="secondary-text" class="social-btn" round>
   <ion-icon name="chatbubbles" style="font-size:1.5em"></ion-icon>
@@ -25,7 +35,12 @@
 </button></a>
 </div>
           <button ion-button outline icon-right color="secondary-text" round (click)="switchTabs(2)" style="margin-top:2.5vh;">
-  Contact Form
+  <ng-container *ngIf = "!deutsch">
+    Contact Form
+  </ng-container>
+   <ng-container *ngIf = "deutsch">
+Kontakt Formular
+  </ng-container>
   <ion-icon name="paper-plane"></ion-icon>
 </button>
       </div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Events } from 'ionic-angular';
 
 import { BravecamPage } from '../bravecam/bravecam';
 
@@ -25,7 +25,13 @@ bravecamPage = BravecamPage;
     chaldiyePage = ChaldiyePage;
     polysparesPage = PolysparesPage;
     polizeigewaltPage = PolizeigewaltPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+    deutsch: boolean;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
+this.events.subscribe('language:changed', deutsch => {
+  this.deutsch = deutsch;
+});
+
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WorkPage');

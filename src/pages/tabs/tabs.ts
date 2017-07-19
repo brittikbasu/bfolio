@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { BlogPage } from '../blog/blog';
 import { ContactPage } from '../contact/contact';
@@ -13,8 +13,22 @@ export class TabsPage {
   tab1Root: any = HomePage;
   tab2Root: any = BlogPage;
   tab3Root: any = ContactPage;
+deutsch: boolean;
+home: string = "Home";
+contact: string = "Contact";
+  constructor(public events: Events) {
 
-  constructor() {
+    this.events.subscribe('language:changed', deutsch =>{
+      this.deutsch = deutsch;
+      if(deutsch){
+        this.home = "Startseite";
+        this.contact = "Kontakt";
+      }
+       else{
+        this.home = "Home";
+        this.contact = "Contact";
+      }
+});
 
   }
 }

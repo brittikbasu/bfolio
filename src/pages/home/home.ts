@@ -6,7 +6,8 @@ import {
 import {
   NavController,
   AlertController,
-  Slides
+  Slides,
+  Events
 } from 'ionic-angular';
 
 import {
@@ -37,7 +38,7 @@ export class HomePage {
   workPage = WorkPage;
   getintouchPage = GetintouchPage;
 
-
+  deutsch: boolean = false;
   about: boolean;
   work: boolean;
   contact: boolean;
@@ -47,8 +48,10 @@ export class HomePage {
   nextSlideNo: number;
   secondaryBright: boolean;
 
+
   // myAlert: boolean;
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public events: Events) {
+    this.deutsch = false;
     this.slideNo = 0;
     this.about = true;
     this.secondaryBright = false;
@@ -56,22 +59,34 @@ export class HomePage {
     this.slidesData = [{
         img: "assets/img/brittik_basu.jpg",
         headline: "Brittik Basu",
-        paragraph: "UX Designer & Front-end Developer"
+        headlineDE:  "Brittik Basu",
+        paragraph: "UX Designer & Front-end Developer",
+        paragraphDE: "UX Designer & Front-end Developer"
+
+
       },
       {
         img: "assets/img/brittik_basu.jpg",
         headline: "My Skills",
-        paragraph: "Exciting projects I've worked on"
+        headlineDE: "Meine Fähigkeiten",
+        paragraph: "Things I'm good at",
+        paragraphDE: "Dinge, an denen ich  bin"
       },
       {
         img: "assets/img/brittik_basu.jpg",
         headline: "My Work",
-        paragraph: "Exciting projects I've worked on"
+        headlineDE: "Meine Arbeit",
+        paragraph: "Exciting projects I've worked on",
+        paragraphDE: "Spannende Projekte, die ich gearbeitet habe",
+
       },
       {
         img: "assets/img/brittik_basu.jpg",
         headline: "Get in Touch",
-        paragraph: "hello(at)brittikbasu.com"
+        headlineDE: "in Kontakt kommen",
+        paragraph: "hello(at)brittikbasu.com",
+        paragraphDE: "Dinge, an denen ich  bin",
+
       },
       {
         img: "",
@@ -96,6 +111,11 @@ export class HomePage {
 
   }
 
+  languageChanged() {
+    console.log("language changed");
+    this.events.publish('language:changed', this.deutsch);
+  }
+  
 
 
   goToSlide() {
@@ -123,6 +143,8 @@ export class HomePage {
 
   }
 
+
+
   slideChanged() {
 
     console.log("Current index is", this.slideNo);
@@ -142,7 +164,7 @@ export class HomePage {
       this.about = false;
       this.contact = false;
       console.log("on skills slide");
-     // this.slides.slideTo(1, 500);
+      // this.slides.slideTo(1, 500);
       window.setTimeout(() => this.secondaryBright = true, 750);
 
 
@@ -151,7 +173,7 @@ export class HomePage {
       this.work = false;
       this.about = false;
       console.log("on work slide");
-     // this.slides.slideTo(2, 500);
+      // this.slides.slideTo(2, 500);
       window.setTimeout(() => this.secondaryBright = true, 350);
 
     } else if (this.slideNo == 3) {

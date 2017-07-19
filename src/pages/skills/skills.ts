@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 
 /**
  * Generated class for the SkillsPage page.
@@ -13,8 +13,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'skills.html',
 })
 export class SkillsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+deutsch: boolean;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
+    this.events.subscribe('language:changed', deutsch =>{
+      this.deutsch = deutsch;
+    } )
   }
 
   ionViewDidLoad() {

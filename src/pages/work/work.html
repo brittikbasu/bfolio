@@ -9,14 +9,15 @@
       <div class="card-title">Brave Cam
         <ion-icon name="arrow-forward" color="secondary-light" class="card-arrow"></ion-icon>
       </div>
-      <div class="card-subtitle">Android app to fight racism</div>
+            <div class="card-subtitle" *ngIf="!deutsch">Android app to fight racism</div>
+      <div class="card-subtitle" *ngIf="deutsch">App, um Rassismus zu bekämpfen</div>
     </div>
 
-    <img class="card-image" src="assets/img/card-madison.png" />
+    <img class="card-image" src="assets/img/card-brave-cam.png" />
 
     <div class="card-button">
-    <button ion-button full color="secondary-light" class="cover">Know More</button>
-    </div>
+ <button ion-button full color="secondary-light" class="cover" *ngIf="!deutsch">Know More</button>
+    <button ion-button full color="secondary-light" class="cover" *ngIf="deutsch">Mehr wissen</button>    </div>
 
   </ion-card>
 
@@ -31,14 +32,16 @@
           </div>
         </div>
       </div>
-      <div class="card-subtitle">App for an Adventure Startup</div>
+      <div class="card-subtitle" *ngIf= "!deutsch">App for an Adventure Startup</div>
+            <div class="card-subtitle" *ngIf= "deutsch">App für ein Abenteuer-Startup</div>
+
     </div>
 
     <img class="card-image" src="assets/img/card-huntfactor.jpg" />
 
     <div class="card-button">
-    <button ion-button full color="secondary-light" class="cover">Know More</button>
-    </div>
+ <button ion-button full color="secondary-light" class="cover" *ngIf="!deutsch">Know More</button>
+    <button ion-button full color="secondary-light" class="cover" *ngIf="deutsch">Mehr wissen</button>    </div>
 
   </ion-card>
 
@@ -48,13 +51,16 @@
       <div class="card-title">Polyspares
         <ion-icon name="arrow-forward" color="secondary-light" class="card-arrow"></ion-icon>
       </div>
-      <div class="card-subtitle">Website for spares exporter</div>
+      <div class="card-subtitle"*ngIf="!deutsch">Website for spares exporter</div>
+      <div class="card-subtitle"*ngIf="deutsch">Webseite für Ersatzteile Exporteur</div>
     </div>
 
     <img class="card-image" src="assets/img/card-polyspares.jpg" />
 
 <div class="card-button">
-    <button ion-button full color="secondary-light" class="cover">Know More</button>
+    <button ion-button full color="secondary-light" class="cover" *ngIf="!deutsch">Know More</button>
+    <button ion-button full color="secondary-light" class="cover" *ngIf="deutsch">Mehr wissen</button>
+
 </div>
 
   </ion-card>
@@ -64,13 +70,15 @@
       <div class="card-title">Polizeigewalt
         <ion-icon name="arrow-forward" color="secondary-light" class="card-arrow"></ion-icon>
       </div>
-      <div class="card-subtitle">Logo design for a non-profit</div>
+      <div class="card-subtitle" *ngIf = "!deutsch">Logo design for a non-profit</div>
+      <div class="card-subtitle" *ngIf = "deutsch">Logo-Design für eine Non-Profit</div>
+
     </div>
-    <img class="card-image" src="assets/img/card-polyspares.jpg" />
+    <img class="card-image" src="assets/img/card-polizei-gewalt.jpg" />
 
     <div class="card-button">
-      <button ion-button full color="secondary-light" class="cover" >Know More</button>
-      </div>
+ <button ion-button full color="secondary-light" class="cover" *ngIf="!deutsch">Know More</button>
+    <button ion-button full color="secondary-light" class="cover" *ngIf="deutsch">Mehr wissen</button>      </div>
   </ion-card>
 <div class="spacer"></div>
 <div class="spacer"></div>

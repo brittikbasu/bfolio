@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import { ContactPage } from '../contact/contact';
 
 /**
@@ -15,8 +15,12 @@ import { ContactPage } from '../contact/contact';
 })
 export class GetintouchPage {
     contactPage = ContactPage;
+    deutsch: boolean;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
+    this.events.subscribe('language:changed', deutsch =>{
+      this.deutsch = deutsch;
+    });
   }
 
   ionViewDidLoad() {

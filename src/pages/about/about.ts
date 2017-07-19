@@ -1,6 +1,15 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs'
+import {
+  Component,
+  ViewChild
+} from '@angular/core';
+import {
+  NavController,
+  NavParams,
+  Events
+} from 'ionic-angular';
+import {
+  TabsPage
+} from '../tabs/tabs'
 
 /*
   Generated class for the About page.
@@ -13,11 +22,20 @@ import { TabsPage } from '../tabs/tabs'
   templateUrl: 'about.html'
 })
 export class AboutPage {
-tabsPage = TabsPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  tabsPage = TabsPage;
+  deutsch: boolean;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
+
+    events.subscribe('language:changed', (deutsch) => {
+      console.log("german is " + deutsch);
+      this.deutsch = deutsch;
+    })
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AboutPage');
+
   }
 
 }
