@@ -163,7 +163,7 @@ page-home {
       background: transparent;
       margin-left: 67.5vw;
       top: 0;
-      padding-top: 5.5vh;
+      padding-top: 6.5vh;
     }
 
     @include mq(mobile) {
@@ -173,12 +173,22 @@ page-home {
       width: 127px;
       padding: 0;
       font-size: 1em;
-      margin-left: 4vw;
+      margin-left: 62.5vw;
       background: transparent;
+           // margin-left: 30vw;
+            margin-top:-6vh;
+            //float:right;
+
     }
       .label {
         color: color($colors, secondary-light);
         font-size: 0.75em;
+            @include mq(mobile) {
+                 // font-size: 0.97em;
+    margin-left: 26px;
+
+
+            }
       }
       .button-inner{
     font-family: $text;

@@ -51,8 +51,7 @@ export class HomePage {
 
   // myAlert: boolean;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, public events: Events) {
-    this.deutsch = false;
-    this.slideNo = 0;
+this.slideNo = 0;
     this.about = true;
     this.secondaryBright = false;
     this.nextSlideNo = 1;
@@ -95,6 +94,7 @@ export class HomePage {
       }
     ];
 
+        this.events.publish('language:changed', this.deutsch);
 
   }
 
@@ -112,6 +112,7 @@ export class HomePage {
   }
 
   languageChanged() {
+    this.deutsch = !this.deutsch;
     console.log("language changed");
     this.events.publish('language:changed', this.deutsch);
   }
