@@ -22,6 +22,12 @@ import {
   GetintouchPage
 } from '../getintouch/getintouch';
 
+import {
+  BravecamPage
+} from '../bravecam/bravecam';
+
+//import { NgxAni } from 'ngxani';
+
 
 @Component({
   selector: 'page-home',

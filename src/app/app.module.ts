@@ -15,6 +15,7 @@ import { PolysparesPage } from '../pages/polyspares/polyspares';
 import { PolizeigewaltPage } from '../pages/polizeigewalt/polizeigewalt';
 import { GetintouchPage } from '../pages/getintouch/getintouch';
 
+//import { NgxAniModule } from 'ngxani';
 
 
 @NgModule({
@@ -52,7 +53,9 @@ import { GetintouchPage } from '../pages/getintouch/getintouch';
 
     }
   }*/}),
-     BrowserModule
+   BrowserModule,
+    //NgxAniModule
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [

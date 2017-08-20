@@ -1,5 +1,4 @@
-page-home {
-
+  page-home {
 
   .show-only-on-mobile{
   @include show-only-on(mobile);
@@ -203,5 +202,9 @@ page-home {
 
     }
   }
+  
+
+
+
   
 }

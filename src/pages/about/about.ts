@@ -7,10 +7,10 @@ import {
   NavParams,
   Events
 } from 'ionic-angular';
-import {
+/*import {
   TabsPage
 } from '../tabs/tabs'
-
+*/
 /*
   Generated class for the About page.
 
@@ -22,7 +22,7 @@ import {
   templateUrl: 'about.html'
 })
 export class AboutPage {
-  tabsPage = TabsPage;
+  //tabsPage = TabsPage;
   deutsch: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
@@ -30,7 +30,7 @@ export class AboutPage {
     events.subscribe('language:changed', (deutsch) => {
       console.log("german is " + deutsch);
       this.deutsch = deutsch;
-    })
+    });
   }
 
   ionViewDidLoad() {

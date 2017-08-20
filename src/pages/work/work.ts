@@ -27,7 +27,7 @@ bravecamPage = BravecamPage;
     polizeigewaltPage = PolizeigewaltPage;
     deutsch: boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
-this.events.subscribe('language:changed', deutsch => {
+this.events.subscribe('language:changed', (deutsch) => {
   this.deutsch = deutsch;
 });
 

@@ -6,13 +6,15 @@
     <h2 [class.secondary-bright]="secondaryBright" *ngIf="!deutsch">{{slidesData[slideNo].headline}}</h2>
         <h2 [class.secondary-bright]="secondaryBright" *ngIf="deutsch">{{slidesData[slideNo].headlineDE}}</h2>
 
-    <p *ngIf="!deutsch">{{slidesData[slideNo].paragraph}}</p>
+    <p *ngIf="!deutsch" (click)="animation(rect)">{{slidesData[slideNo].paragraph}}</p>
         <p *ngIf="deutsch">{{slidesData[slideNo].paragraphDE}}</p>
 
   </ion-item>
 <ion-item class="deutsch-toggle">
-  <ion-toggle (tap)="languageChanged()"></ion-toggle>
+  <ion-toggle (tap)="languageChanged()">
+  </ion-toggle>
     <ion-label>Deutsch</ion-label>
+    <h1>de</h1>
 </ion-item>
   <div class="header-buttons">
   <button class="header-back-button " round ion-button large icon-left color="secondary" (click)='this.slide("prev")' *ngIf="slideNo > 0">
@@ -54,7 +56,7 @@
         <ion-toolbar>
   
     
-          <button ion-button icon-right color="secondary-text"  clear class="next-slide-button" (click)='this.slide("next")'>
+  <button ion-button icon-right color="secondary-text"  clear class="next-slide-button" (click)='this.slide("next")'>
   <ion-icon name="ios-arrow-back"> </ion-icon> 
   <ion-icon name="ios-arrow-back"> </ion-icon>
   <ion-icon name="ios-arrow-back"> </ion-icon>   

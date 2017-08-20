@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Events } from 'ionic-angular';
 
 /*
   Generated class for the Chaldiye page.
@@ -13,7 +13,12 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ChaldiyePage {
 win: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+de: boolean;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events ) {
+    this.events.subscribe('language:changed', (deutsch) =>{
+      this.de = deutsch;
+    });
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChaldiyePage');

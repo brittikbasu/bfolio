@@ -1,5 +1,13 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams, Events } from 'ionic-angular';
+import {
+  Component,
+  ViewChild
+} from '@angular/core';
+import {
+  NavController,
+  NavParams,
+  Events
+} from 'ionic-angular';
+
 
 /*
   Generated class for the Bravecam page.
@@ -12,28 +20,40 @@ import { NavController, NavParams, Events } from 'ionic-angular';
   templateUrl: 'bravecam.html'
 })
 export class BravecamPage {
-win: any;
-de: boolean;
+  win: any;
+  de: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
-    this.events.subscribe('language:changed', deutsch => {
-      console.log("german iis " +deutsch);
-  this.de = deutsch;
-  console.log("ger" +deutsch);
-    console.log("germmm" +this.de);
+    events.subscribe('language:changed', (deutsch) => {
+      this.de = deutsch;
+      if (this.de) {
+        console.log("bravecam is in german");
+      }
+      else{
+                console.log("bravecam is NOT in german");
 
-});
+      }
+      console.log("DE is ", this.de);
 
+      // alert("awsome!");
+    });
   }
 
   ionViewDidLoad() {
+    console.log(this.de, "cool");
     console.log('ionViewDidLoad BravecamPage');
+    if (this.de) {
+      alert("yes!!");
+    }
+    else{
+      alert("no");
+    }
 
   }
 
   newTab(url) {
-  this.win = window.open(url, '_blank');
-  this.win.focus();
-}
+    this.win = window.open(url, '_blank');
+    this.win.focus();
+  }
 
 }
