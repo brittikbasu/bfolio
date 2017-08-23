@@ -19,6 +19,11 @@ import {
 } from '../work/work';
 
 import {
+  PolysparesPage
+} from '../polyspares/polyspares';
+
+
+import {
   GetintouchPage
 } from '../getintouch/getintouch';
 

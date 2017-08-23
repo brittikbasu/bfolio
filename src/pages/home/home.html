@@ -20,7 +20,7 @@
   <button class="header-back-button " round ion-button large icon-left color="secondary" (click)='this.slide("prev")' *ngIf="slideNo > 0">
   <ion-icon name="arrow-back"></ion-icon>
 </button>
-      <button class="header-forward-button show-only-on-laptop" round ion-button large icon-right color="secondary" (click)='this.slide("next")' *ngIf="this.slideNo != 3">
+      <button class="header-forward-button show-only-on-laptop animated pulse" round ion-button large icon-right color="secondary" (click)='this.slide("next")' *ngIf="this.slideNo != 3">
   <ng-container *ngIf="!deutsch">{{slidesData[nextSlideNo].headline}}</ng-container>
     <ng-container *ngIf="deutsch">{{slidesData[nextSlideNo].headlineDE}}</ng-container>
 

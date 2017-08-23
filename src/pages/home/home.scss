@@ -1,4 +1,41 @@
   page-home {
+@import "_animate";
+
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    background-color: color($colors, primary-dark);
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    background-color: color($colors, secondary);    
+    transform: translateX(-6px) rotateY(-9deg);
+    
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    background-color: color($colors, primary-dark);  
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+-webkit-animation-duration: 12s;
+-webkit-animation-iteration-count: infinite;    
+}
 
   .show-only-on-mobile{
   @include show-only-on(mobile);
