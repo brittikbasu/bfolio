@@ -42,12 +42,6 @@ export class BravecamPage {
   ionViewDidLoad() {
     console.log(this.de, "cool");
     console.log('ionViewDidLoad BravecamPage');
-    if (this.de) {
-      alert("yes!!");
-    }
-    else{
-      alert("no");
-    }
 
   }
 

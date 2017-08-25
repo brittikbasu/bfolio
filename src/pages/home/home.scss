@@ -1,247 +1,228 @@
   page-home {
-@import "_animate";
-
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-    background-color: color($colors, primary-dark);
-    transform: translateX(0);
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(0,0,0);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-    background-color: color($colors, secondary);    
-    transform: translateX(-6px) rotateY(-9deg);
-    
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-    background-color: color($colors, primary-dark);  
-    transform: translateX(0);
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(0,0,0);
-  }
-}
-
-.pulse {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
--webkit-animation-duration: 12s;
--webkit-animation-iteration-count: infinite;    
-}
-
-  .show-only-on-mobile{
-  @include show-only-on(mobile);
-}
-.show-only-on-laptop{
-  @include show-only-on(laptop);
-}
-
-  .secondary-bright {
-    color: color($colors, secondary-bright);
-  }
-  .button-ios {
-    @include mq(iphone5) {
-      height: 2.5em;
+    // animations //
+    .animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
     }
-  }
-// =============================================== slides //
-  .scroll-content {
-    @include mq(laptop) {
-      overflow: hidden;
-    }
-  }
-  ion-slides {
-    @include mq(laptop) {
-      // height: 111%;
-      height: 85vh; // margin-top: -4.1%;
-    }
-  }
-  .slide-footer {
-    background: black;
-    margin-bottom: 0.1vh;
-    @include mq(laptop) {
-      margin-bottom: $header-height*0.35;
-    }
-    @include mq(mobile){
-      p{
-      margin-bottom: 0.4vh;
+    @keyframes pulse {
+      from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        background-color: color($colors, primary-dark);
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transform: translate3d(0, 0, 0);
+      }
+      50% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        background-color: color($colors, secondary);
+        transform: translateX(-6px) rotateY(-9deg);
+      }
+      to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        background-color: color($colors, primary-dark);
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transform: translate3d(0, 0, 0);
       }
     }
-  }
-  .slide-about {
-    // @include slide-up-button;
-    //background: color($colors, 'primary');
-    //margin-top: -$header-height*1.2;
-    background-color: color($colors, primary);
-    p {
-      color: color($colors, secondary-text);
+    .pulse {
+      -webkit-animation-name: pulse;
+      animation-name: pulse;
+      -webkit-animation-duration: 9s;
+      -webkit-animation-iteration-count: infinite;
     }
-    @include mq(laptop) {
-      //background: color($colors, 'dark');
-      //margin-top: 0;
+    .show-only-on-mobile {
+      @include show-only-on(mobile);
     }
-  }
-  .slide-skills {
-    // @include slide-up-button;
-    p {
-      color: color($colors, primary-dark);
+    .show-only-on-laptop {
+      @include show-only-on(laptop);
     }
-    @include mq(mobile) {
-      @include next-slide-button($border-color: primary-dark, $text-color:secondary-text, $bg-color:primary);
+    .secondary-bright {
+      color: color($colors, secondary-bright);
     }
-    @include button-blur-bg(rgba(color($colors, tertiary), 0.55)); //background: color($colors, 'primary');
-    //margin-x: -$header-height*1.2;
-    background-color: #C9100A;
-    @include mq(laptop) {
-      //background: color($colors, 'dark');
-      // margin-top: 0;
+    .button-ios {
+      @include mq(iphone5) {
+        height: 2.5em;
+      }
+    } // =============================================== slides //
+    .scroll-content {
+      @include mq(laptop) {
+        overflow: hidden;
+      }
     }
-  }
-  .slide-work {
-    @include mq(mobile) {
-      @include next-slide-button(primary-dark, secondary-text, secondary);
+    ion-slides {
+      @include mq(laptop) {
+        // height: 111%;
+        height: 85vh; // margin-top: -4.1%;
+      }
     }
-    @include slide-up-button;
-    @include button-blur-bg(rgba(color($colors, primary-dark), 0.55));
-    background: color($colors, 'primary-dark');
-  }
-  .slide-contact {
-    .social-buttons {
-      .button-ios {
-        @include mq(iphone5) {
-          height: 3.9em;
+    .slide-footer {
+      background: black;
+      margin-bottom: 0.1vh;
+      @include mq(laptop) {
+        margin-bottom: $header-height*0.35;
+      }
+      @include mq(mobile) {
+        p {
+          margin-bottom: 0.4vh;
         }
       }
     }
-    p {
-      color: color($colors, primary-dark);
+    .slide-about {
+      // @include slide-up-button;
+      //background: color($colors, 'primary');
+      //margin-top: -$header-height*1.2;
+      background-color: color($colors, primary);
+      p {
+        color: color($colors, secondary-text);
+      }
+      @include mq(laptop) {
+        //background: color($colors, 'dark');
+        //margin-top: 0;
+      }
     }
-    background: color($colors, 'secondary');
-    @include slide-up-button {
-      // background-color: rgba(color($colors, primary-dark), 0.25);
+    .slide-skills {
+      // @include slide-up-button;
+      p {
+        color: color($colors, primary-dark);
+      }
+      @include mq(mobile) {
+        @include next-slide-button($border-color: primary-dark, $text-color:secondary-text, $bg-color:primary);
+      }
+      @include button-blur-bg(rgba(color($colors, tertiary), 0.55)); //background: color($colors, 'primary');
+      //margin-x: -$header-height*1.2;
+      background-color: #C9100A;
+      @include mq(laptop) {
+        //background: color($colors, 'dark');
+        // margin-top: 0;
+      }
     }
-    .button-inner {
-      color: color($colors, secondary-text);
+    .slide-work {
+      @include mq(mobile) {
+        @include next-slide-button(primary-dark, secondary-text, secondary);
+      }
+      @include slide-up-button;
+      @include button-blur-bg(rgba(color($colors, primary-dark), 0.55));
+      background: color($colors, 'primary-dark');
     }
-  } //---------------------------------------------------------------
-  .swiper-pagination-progress .swiper-pagination-progressbar {
-    background-color: color($colors, secondary-bright);
-  }
-  .swiper-container-horizontal>.swiper-pagination-progress {
-    top: $header-height*1.235; // height: 4px;
-    top: -0.01vh;
-    @include mq(laptop) {
-      // top: 15.2vh;
-      top: 0;
+    .slide-contact {
+      .social-buttons {
+        .button-ios {
+          @include mq(iphone5) {
+            height: 3.9em;
+          }
+        }
+      }
+      p {
+        color: color($colors, primary-dark);
+      }
+      background: color($colors, 'secondary');
+      @include slide-up-button {
+        // background-color: rgba(color($colors, primary-dark), 0.25);
+      }
+      .button-inner {
+        color: color($colors, secondary-text);
+      }
+    } //---------------------------------------------------------------
+    .swiper-pagination-progress .swiper-pagination-progressbar {
+      background-color: color($colors, secondary-bright);
     }
-  }
-  .swiper-button-prev {
-    display: none;
-    @include mq(laptop) {
-      display: inherit;
+    .swiper-container-horizontal>.swiper-pagination-progress {
+      top: $header-height*1.235; // height: 4px;
+      top: -0.01vh;
+      @include mq(laptop) {
+        // top: 15.2vh;
+        top: 0;
+      }
     }
-  }
-  .swiper-button-next {
-    display: none;
-    @include mq(laptop) {
-      display: inherit;
+    .swiper-button-prev {
+      display: none;
+      @include mq(laptop) {
+        display: inherit;
+      }
     }
-  }
-  .__web-inspector-hide-shortcut__,
-  .__web-inspector-hide-shortcut__ *,
-  .__web-inspector-hidebefore-shortcut__::before,
-  .__web-inspector-hideafter-shortcut__::after {
-    visibility: visible;
-  }
-  .tabbar {
-    @include mq(laptop) {
-      margin-top: 3.8vh;
+    .swiper-button-next {
+      display: none;
+      @include mq(laptop) {
+        display: inherit;
+      }
     }
-  }
-  .header-forward-button {
-    position: absolute;
-    top: 18%;
-    right: -2vw;
-    color: color($colors, secondary-text); //padding-left:2vw;
-    width: 22%;
-    height: 47%;
-    text-align: left;
-    padding-right: 4vw;
-    font-family: $text; //position: inline-block;
-  }
-  .header-back-button {
-    position: absolute;
-    top: 19%;
-    left: -2vw;
-    color: color($colors, secondary-text);
-    width: 8vw;
-    padding-left: 3vw;
-  }
-  //================ header buttons ==================//
-  .header-buttons {
-    @include show-only-on(laptop);
-  }
-  .deutsch-toggle {
-    font-family: "Exo 2", "Helvetica Neue", sans-serif;
-          display: inline-block;
-
-    @include mq(laptop) {
+    .__web-inspector-hide-shortcut__,
+    .__web-inspector-hide-shortcut__ *,
+    .__web-inspector-hidebefore-shortcut__::before,
+    .__web-inspector-hideafter-shortcut__::after {
+      visibility: visible;
+    }
+    .tabbar {
+      @include mq(laptop) {
+        margin-top: 3.8vh;
+      }
+    }
+    .header-forward-button {
       position: absolute;
-      width: 145px;
-      background: transparent;
-      margin-left: 67.5vw;
-      top: 0;
-      padding-top: 6.5vh;
+      top: 18%;
+      right: -2vw;
+      color: color($colors, secondary-text); //padding-left:2vw;
+      width: 22%;
+      height: 47%;
+      text-align: left;
+      padding-right: 4vw;
+      font-family: $text; //position: inline-block;
     }
-
-    @include mq(mobile) {
-      float: left;
-      position: relative;
-      margin-left: 0;
-      width: 127px;
-      padding: 0;
-      font-size: 1em;
-      margin-left: 62.5vw;
-      background: transparent;
-           // margin-left: 30vw;
-            margin-top:-6vh;
-            //float:right;
-
+    .header-back-button {
+      position: absolute;
+      top: 19%;
+      left: -2vw;
+      color: color($colors, secondary-text);
+      width: 8vw;
+      padding-left: 3vw;
+    } //================ header buttons ==================//
+    .header-buttons {
+      @include show-only-on(laptop);
     }
+    .deutsch-toggle {
+      font-family: "Exo 2", "Helvetica Neue", sans-serif;
+      display: inline-block;
+      @include mq(laptop) {
+        position: absolute;
+        width: 145px;
+        background: transparent;
+        margin-left: 67.5vw;
+        top: 0;
+        padding-top: 6.5vh;
+      }
+      @include mq(mobile) {
+        float: left;
+        position: relative;
+        margin-left: 0;
+        width: 127px;
+        padding: 0;
+        font-size: 1em;
+        margin-left: 62.5vw;
+        background: transparent; // margin-left: 30vw;
+        margin-top: -6vh; //float:right;
+      }
       .label {
         color: color($colors, secondary-light);
         font-size: 0.75em;
-            @include mq(mobile) {
-                 // font-size: 0.97em;
-    margin-left: 26px;
-
-
-            }
+        @include mq(mobile) {
+          // font-size: 0.97em;
+          margin-left: 26px;
+        }
       }
-      .button-inner{
-    font-family: $text;
-    font-size:1.15em;
-    padding-top:3%;
-  }
-  }
-  .toolbar-background{
-    background-color: color($colors, light-dark);
-    @include mq(laptop){
-          background: transparent;
-
+      .button-inner {
+        font-family: $text;
+        font-size: 1.15em;
+        padding-top: 3%;
+      }
+    }
+    .toolbar-background {
+      background-color: color($colors, light-dark);
+      @include mq(laptop) {
+        background: transparent;
+      }
     }
   }
-  
-
-
-
-  
-}
